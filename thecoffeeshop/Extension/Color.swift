@@ -15,6 +15,8 @@ public extension Color {
     static let onPrimary = Color(hex: "#F2F2F2")
     static let caption = Color(hex: "#2F4B4E")
     static let onBackground = Color(hex: "#A9A9A9")
+    static let canvas = Color(hex: "#FFF5EE")
+    static let variant = Color(hex: "#F1F1F1")
 
     init(hex: String) {
          var cleanHexCode = hex.trimmingCharacters(in: .whitespacesAndNewlines)
