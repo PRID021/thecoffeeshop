@@ -14,6 +14,10 @@
 		04564B8F2B27456800A6D7ED /* thecoffeeshopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564B8E2B27456800A6D7ED /* thecoffeeshopTests.swift */; };
 		04564B992B27456800A6D7ED /* thecoffeeshopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564B982B27456800A6D7ED /* thecoffeeshopUITests.swift */; };
 		04564B9B2B27456800A6D7ED /* thecoffeeshopUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564B9A2B27456800A6D7ED /* thecoffeeshopUITestsLaunchTests.swift */; };
+		04564BA92B27464E00A6D7ED /* Landing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BA82B27464E00A6D7ED /* Landing.swift */; };
+		04564BAC2B27495B00A6D7ED /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BAB2B27495B00A6D7ED /* Color.swift */; };
+		04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BAE2B274EE300A6D7ED /* ElevatedButton.swift */; };
+		04564BB12B27544F00A6D7ED /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BB02B27544F00A6D7ED /* Home.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +48,10 @@
 		04564B942B27456800A6D7ED /* thecoffeeshopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = thecoffeeshopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		04564B982B27456800A6D7ED /* thecoffeeshopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thecoffeeshopUITests.swift; sourceTree = "<group>"; };
 		04564B9A2B27456800A6D7ED /* thecoffeeshopUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thecoffeeshopUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		04564BA82B27464E00A6D7ED /* Landing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landing.swift; sourceTree = "<group>"; };
+		04564BAB2B27495B00A6D7ED /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		04564BAE2B274EE300A6D7ED /* ElevatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatedButton.swift; sourceTree = "<group>"; };
+		04564BB02B27544F00A6D7ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +102,9 @@
 		04564B7C2B27456700A6D7ED /* thecoffeeshop */ = {
 			isa = PBXGroup;
 			children = (
+				04564BAD2B274EC700A6D7ED /* Component */,
+				04564BAA2B27494800A6D7ED /* Extension */,
+				04564BA72B27464100A6D7ED /* View */,
 				04564B7D2B27456700A6D7ED /* thecoffeeshopApp.swift */,
 				04564B7F2B27456700A6D7ED /* ContentView.swift */,
 				04564B812B27456800A6D7ED /* Assets.xcassets */,
@@ -125,6 +136,31 @@
 				04564B9A2B27456800A6D7ED /* thecoffeeshopUITestsLaunchTests.swift */,
 			);
 			path = thecoffeeshopUITests;
+			sourceTree = "<group>";
+		};
+		04564BA72B27464100A6D7ED /* View */ = {
+			isa = PBXGroup;
+			children = (
+				04564BA82B27464E00A6D7ED /* Landing.swift */,
+				04564BB02B27544F00A6D7ED /* Home.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		04564BAA2B27494800A6D7ED /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				04564BAB2B27495B00A6D7ED /* Color.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		04564BAD2B274EC700A6D7ED /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				04564BAE2B274EE300A6D7ED /* ElevatedButton.swift */,
+			);
+			path = Component;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +294,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				04564B802B27456700A6D7ED /* ContentView.swift in Sources */,
+				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
+				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
+				04564BB12B27544F00A6D7ED /* Home.swift in Sources */,
+				04564BA92B27464E00A6D7ED /* Landing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
