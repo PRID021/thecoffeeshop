@@ -18,6 +18,8 @@
 		04564BAC2B27495B00A6D7ED /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BAB2B27495B00A6D7ED /* Color.swift */; };
 		04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BAE2B274EE300A6D7ED /* ElevatedButton.swift */; };
 		04564BB12B27544F00A6D7ED /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BB02B27544F00A6D7ED /* Home.swift */; };
+		04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BB22B275AEA00A6D7ED /* HomeTab.swift */; };
+		049E08662B27CEA300842B7D /* UserTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E08652B27CEA300842B7D /* UserTitle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +54,8 @@
 		04564BAB2B27495B00A6D7ED /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		04564BAE2B274EE300A6D7ED /* ElevatedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElevatedButton.swift; sourceTree = "<group>"; };
 		04564BB02B27544F00A6D7ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		04564BB22B275AEA00A6D7ED /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
+		049E08652B27CEA300842B7D /* UserTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTitle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +147,7 @@
 			children = (
 				04564BA82B27464E00A6D7ED /* Landing.swift */,
 				04564BB02B27544F00A6D7ED /* Home.swift */,
+				04564BB22B275AEA00A6D7ED /* HomeTab.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				04564BAE2B274EE300A6D7ED /* ElevatedButton.swift */,
+				049E08652B27CEA300842B7D /* UserTitle.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -296,8 +302,10 @@
 				04564B802B27456700A6D7ED /* ContentView.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
 				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
+				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				04564BB12B27544F00A6D7ED /* Home.swift in Sources */,
+				04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */,
 				04564BA92B27464E00A6D7ED /* Landing.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
