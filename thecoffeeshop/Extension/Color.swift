@@ -16,7 +16,7 @@ public extension Color {
     static let caption = Color(hex: "#2F4B4E")
     static let onBackground = Color(hex: "#A9A9A9")
     static let canvas = Color(hex: "#FFF5EE")
-    static let variant = Color(hex: "#F1F1F1")
+    static let variant = Color(hex: "#FFFFFF")
     static let bgStart = Color(hex: "#313131")
     static let bgEnd =  Color(hex: "#131313")
     init(hex: String) {

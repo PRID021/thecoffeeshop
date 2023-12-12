@@ -16,8 +16,9 @@ struct Home: View {
     
     var body: some View {
         TabView(selection: $tabBarViewModel.currentTab){
-            HomeTab()
+            HomeTab(animation: animation)
                 .tag(Tab.home)
+                .toolbar(.hidden, for: .tabBar)
             Text("TAB_B")
                 .tag(Tab.favorite)
             Text("TAB_C")
@@ -26,7 +27,6 @@ struct Home: View {
                 .tag(Tab.message)
         }
 
-       
         .overlay(alignment: .bottom){
             HStack{
                 TabBarButton(tab: .home , image: "house", animation: animation)
@@ -34,8 +34,8 @@ struct Home: View {
                 TabBarButton(tab: .news , image:  "newspaper", animation: animation)
                 TabBarButton(tab: .message , image: "bell", animation: animation)
             }
-            .offset(x:0,y:8)
-            .background(Color.variant)
+            .background(Color.bgEnd)
+
         }
         .environmentObject(tabBarViewModel)
         .navigationBarBackButtonHidden(true)
@@ -74,6 +74,7 @@ struct TabBarButton : View {
                 Image(systemName: tabBarViewModel.currentTab == tab ? image+".fill" : image)
                     .font(.title2)
                     .frame(height: 16)
+                    .padding(.top,8)
                 Text(tab.rawValue)
                     .font(.caption.bold())
             }
@@ -89,7 +90,6 @@ struct TabBarButton : View {
                                     colors: [.appPrimary.opacity(0.5), .appPrimary.opacity(0.1),.clear]
                                 ), startPoint: .top, endPoint: .bottom)
                             )
-                            .offset(x: 0 , y: -8)
                             .padding(.horizontal, 8)
                             .matchedGeometryEffect(id: "TAB", in: animation)
                     }

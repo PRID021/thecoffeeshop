@@ -25,7 +25,7 @@ struct UserTitle : View {
             Image(image)
                 .resizable()
                 .aspectRatio(contentMode: .fit)
-                .clipShape(RoundedRectangle(cornerRadius: 5))
+                .clipShape(RoundedRectangle(cornerRadius: 15))
                 .frame(width: 48)
         }
         .padding()
