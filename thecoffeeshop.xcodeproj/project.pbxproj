@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04045DD22B28A21200502577 /* FavoriteTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04045DD12B28A21200502577 /* FavoriteTab.swift */; };
+		04045DD42B28A67800502577 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04045DD32B28A67800502577 /* SizePreferenceKey.swift */; };
+		04045DD62B28AE8400502577 /* Compareable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04045DD52B28AE8400502577 /* Compareable.swift */; };
+		04045DD82B28B3EC00502577 /* ResizeableVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04045DD72B28B3EC00502577 /* ResizeableVStack.swift */; };
 		04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564B7D2B27456700A6D7ED /* thecoffeeshopApp.swift */; };
 		04564B802B27456700A6D7ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564B7F2B27456700A6D7ED /* ContentView.swift */; };
 		04564B822B27456800A6D7ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04564B812B27456800A6D7ED /* Assets.xcassets */; };
@@ -45,6 +49,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		04045DD12B28A21200502577 /* FavoriteTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteTab.swift; sourceTree = "<group>"; };
+		04045DD32B28A67800502577 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
+		04045DD52B28AE8400502577 /* Compareable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compareable.swift; sourceTree = "<group>"; };
+		04045DD72B28B3EC00502577 /* ResizeableVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeableVStack.swift; sourceTree = "<group>"; };
 		04564B7A2B27456700A6D7ED /* thecoffeeshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thecoffeeshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04564B7D2B27456700A6D7ED /* thecoffeeshopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thecoffeeshopApp.swift; sourceTree = "<group>"; };
 		04564B7F2B27456700A6D7ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -159,6 +167,7 @@
 				04564BA82B27464E00A6D7ED /* Landing.swift */,
 				04564BB02B27544F00A6D7ED /* Home.swift */,
 				04564BB22B275AEA00A6D7ED /* HomeTab.swift */,
+				04045DD12B28A21200502577 /* FavoriteTab.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -166,8 +175,10 @@
 		04564BAA2B27494800A6D7ED /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				04045DD32B28A67800502577 /* SizePreferenceKey.swift */,
 				04564BAB2B27495B00A6D7ED /* Color.swift */,
 				C0CE72A62B27FB2C00897D53 /* TextPlaceHolder.swift */,
+				04045DD52B28AE8400502577 /* Compareable.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -179,6 +190,7 @@
 				049E08652B27CEA300842B7D /* UserTitle.swift */,
 				C0CE72AB2B2830CC00897D53 /* DinkCard.swift */,
 				C0CE72AD2B283FA800897D53 /* GridScrollView.swift */,
+				04045DD72B28B3EC00502577 /* ResizeableVStack.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -329,12 +341,16 @@
 				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
 				C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */,
 				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,
+				04045DD62B28AE8400502577 /* Compareable.swift in Sources */,
 				C0CE72AC2B2830CC00897D53 /* DinkCard.swift in Sources */,
+				04045DD22B28A21200502577 /* FavoriteTab.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,
 				04564BB12B27544F00A6D7ED /* Home.swift in Sources */,
 				04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */,
 				04564BA92B27464E00A6D7ED /* Landing.swift in Sources */,
+				04045DD82B28B3EC00502577 /* ResizeableVStack.swift in Sources */,
+				04045DD42B28A67800502577 /* SizePreferenceKey.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

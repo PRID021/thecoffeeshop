@@ -19,7 +19,7 @@ struct Home: View {
             HomeTab(animation: animation)
                 .tag(Tab.home)
                 .toolbar(.hidden, for: .tabBar)
-            Text("TAB_B")
+            FavoriteTab()
                 .tag(Tab.favorite)
             Text("TAB_C")
                 .tag(Tab.news)
