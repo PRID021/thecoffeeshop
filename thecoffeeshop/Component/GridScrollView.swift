@@ -15,13 +15,11 @@ struct GridScrollView: View {
     ]
     
     var body: some View {
-        ScrollView(.vertical){
             LazyVGrid(columns: layout) {
                 ForEach(drinks){ drink in
                     DinkCard(drinkItem: drink)
                 }
             }
-        }
     }
 }
 
