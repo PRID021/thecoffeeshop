@@ -7,6 +7,20 @@
 
 import SwiftUI
 
+
+struct AdaptiveLabelStyle: LabelStyle {
+
+  func makeBody(configuration: Configuration) -> some View {
+      HStack {
+        configuration.icon
+              .foregroundColor(.yellow)
+        configuration.title
+              .foregroundColor(.white)
+      }
+    }
+  }
+
+
 struct DinkCard: View {
     var drinkItem: DrinkItem
     var body: some View {
@@ -19,6 +33,24 @@ struct DinkCard: View {
                     .padding(.horizontal,4)
                     .padding(.top,4)
                     .padding(.bottom,12)
+                    .overlay(alignment: .topLeading){
+                        Label("\(String(format:"%.2f",drinkItem.starRate))",systemImage: "star.fill")
+                            .labelStyle(AdaptiveLabelStyle())
+                            .font(.system(size: 16))
+                            .padding(.vertical,4)
+                            .padding(.horizontal,8)
+                            .background(.ultraThinMaterial)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 16,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 18,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                            .padding(.top,4)
+                            .padding(.leading,4)
+                    }
                 
                 VStack(alignment: .leading, spacing: 0){
                     Text(drinkItem.categorie)
@@ -58,6 +90,7 @@ struct DinkCard: View {
     let drinkItem = DrinkItem(starRate: 4.8, image: "cappucino", categorie: "Cappucino", toping: "Chocolate", price: 4.53)
     return DinkCard(drinkItem: drinkItem)
         .frame(maxWidth: 150, maxHeight: 250)
-        .frame(width: .infinity,height: .infinity)
-        .background(Color.canvas)
+
+        .padding()
+        .background(Color.black)
 }
