@@ -30,6 +30,7 @@ struct DinkCard: View {
                     .resizable()
                     .aspectRatio(141/132,contentMode: .fill)
                     .cornerRadius(16)
+                  
                     .padding(.horizontal,4)
                     .padding(.top,4)
                     .padding(.bottom,12)
@@ -51,7 +52,6 @@ struct DinkCard: View {
                             .padding(.top,4)
                             .padding(.leading,4)
                     }
-                
                 VStack(alignment: .leading, spacing: 0){
                     Text(drinkItem.categorie)
                         .font(.system(size: 16))

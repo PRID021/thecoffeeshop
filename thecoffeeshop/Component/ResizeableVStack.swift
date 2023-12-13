@@ -77,9 +77,13 @@ struct OffsetObservingScrollView<Content: View>: View {
 
 
 struct ResizeableVStack<R:View,  S:View>: View {
+    @Binding var seletedSectionDrink: DrinkSection
+    var sections: [DrinkSection]
     @State private var offSet: CGPoint = CGPoint(x: 0.0, y: 0.0)
     @ViewBuilder var contentResizeable: (_ offSet :CGPoint) -> R
-    @ViewBuilder var contentScrollable: () -> S
+    @ViewBuilder var contentScrollable: (_ selectedSection: DrinkSection) -> S
+    
+
     var body: some View {
         GeometryReader { geo in
             let maxWidth: CGFloat = .infinity
@@ -88,8 +92,16 @@ struct ResizeableVStack<R:View,  S:View>: View {
             VStack(spacing: 0) {
                     contentResizeable(offSet)
                     .frame(maxWidth: maxWidth,minHeight: minHeight,maxHeight: max(maxHeight - offSet.y, minHeight))
-                OffsetObservingScrollView(offset: $offSet){
-                    contentScrollable()
+                TabView (selection: $seletedSectionDrink){
+                    ForEach(sections){ section in
+                        OffsetObservingScrollView(offset: $offSet){
+                            contentScrollable(section)
+                                .padding(.horizontal,16)
+                                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+//                                .animation(nil, value: UUID())
+                        }.tag(section)
+                    }
+                    .background(Color.canvas)
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)

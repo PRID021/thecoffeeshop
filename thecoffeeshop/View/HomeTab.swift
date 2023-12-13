@@ -14,7 +14,7 @@ struct HomeTab: View {
     var animation: Namespace.ID
     var body: some View {
         GeometryReader { geo in
-                ResizeableVStack{ offset in
+            ResizeableVStack(seletedSectionDrink: $selectedDrinkSection,sections: drinkSections ){ offset in
                         VStack(alignment: .leading,spacing: 0) {
                             VStack(spacing: 0) {
                                 if (offset.y.clamped(from: 0, to: .infinity) < 10){
@@ -92,7 +92,6 @@ struct HomeTab: View {
                                     }
                                 }
                                 .scrollTargetLayout()
-                                
                             }
                             .scrollIndicators(.hidden)
                             .scrollTargetBehavior(.viewAligned)
@@ -101,23 +100,11 @@ struct HomeTab: View {
                             }
                         }
                     } 
-                            contentScrollable:{
-//                                TabView(selection: $selectedDrinkSection)  {
-//                                    ForEach(drinkSections){drinkSection in
-                                            GridDrinkItemCard(drinks: selectedDrinkSection.drinks)
-//                                            .tag(drinkSection)
-                                            .safeAreaPadding(.bottom,64)
-//                                    }
-//                                }
-                                .padding(.horizontal,16)
-                                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-                                .animation(nil, value: UUID())
+                        contentScrollable:{ selectedSectionDrink in
+                            GridDrinkItemCard(drinks: selectedSectionDrink.drinks )
                     }
-                
-                        .background(Color.canvas)
-            
+                    .background(Color.canvas)
         }
-        
     }
 }
 #Preview {

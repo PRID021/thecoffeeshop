@@ -15,7 +15,7 @@ struct GridDrinkItemCard: View {
     ]
     
     var body: some View {
-            LazyVGrid(columns: layout) {
+            LazyVGrid(columns: layout, spacing: 8) {
                 ForEach(drinks){ drink in
                     DinkCard(drinkItem: drink)
                 }

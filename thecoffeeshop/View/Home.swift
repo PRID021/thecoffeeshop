@@ -29,7 +29,7 @@ struct Home: View {
 
         .overlay(alignment: .bottom){
             HStack{
-                TabBarButton(tab: .home , image: "house", animation: animation)
+                TabBarButton(tab: .home , image: "cup.and.saucer", animation: animation)
                 TabBarButton(tab: .favorite , image: "heart", animation: animation)
                 TabBarButton(tab: .news , image:  "newspaper", animation: animation)
                 TabBarButton(tab: .message , image: "bell", animation: animation)
@@ -45,9 +45,9 @@ struct Home: View {
 
 
 enum Tab: String, CaseIterable {
-    case home = "Home"
-    case favorite = "Favorite"
-    case news = "News"
+    case home = "Menu"
+    case favorite = "Like"
+    case news = "Voucher"
     case message = "Message"
     
 }
