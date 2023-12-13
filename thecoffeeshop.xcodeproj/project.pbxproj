@@ -27,7 +27,7 @@
 		C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72A62B27FB2C00897D53 /* TextPlaceHolder.swift */; };
 		C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72A92B282E5500897D53 /* DrinkItem.swift */; };
 		C0CE72AC2B2830CC00897D53 /* DinkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72AB2B2830CC00897D53 /* DinkCard.swift */; };
-		C0CE72AE2B283FA800897D53 /* GridScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72AD2B283FA800897D53 /* GridScrollView.swift */; };
+		C0CE72AE2B283FA800897D53 /* GridDrinkItemCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72AD2B283FA800897D53 /* GridDrinkItemCard.swift */; };
 		C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72AF2B284AC700897D53 /* DrinkSection.swift */; };
 /* End PBXBuildFile section */
 
@@ -72,7 +72,7 @@
 		C0CE72A62B27FB2C00897D53 /* TextPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlaceHolder.swift; sourceTree = "<group>"; };
 		C0CE72A92B282E5500897D53 /* DrinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItem.swift; sourceTree = "<group>"; };
 		C0CE72AB2B2830CC00897D53 /* DinkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinkCard.swift; sourceTree = "<group>"; };
-		C0CE72AD2B283FA800897D53 /* GridScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridScrollView.swift; sourceTree = "<group>"; };
+		C0CE72AD2B283FA800897D53 /* GridDrinkItemCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridDrinkItemCard.swift; sourceTree = "<group>"; };
 		C0CE72AF2B284AC700897D53 /* DrinkSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSection.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -189,7 +189,7 @@
 				04564BAE2B274EE300A6D7ED /* ElevatedButton.swift */,
 				049E08652B27CEA300842B7D /* UserTitle.swift */,
 				C0CE72AB2B2830CC00897D53 /* DinkCard.swift */,
-				C0CE72AD2B283FA800897D53 /* GridScrollView.swift */,
+				C0CE72AD2B283FA800897D53 /* GridDrinkItemCard.swift */,
 				04045DD72B28B3EC00502577 /* ResizeableVStack.swift */,
 			);
 			path = Component;
@@ -337,7 +337,7 @@
 				04564B802B27456700A6D7ED /* ContentView.swift in Sources */,
 				C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
-				C0CE72AE2B283FA800897D53 /* GridScrollView.swift in Sources */,
+				C0CE72AE2B283FA800897D53 /* GridDrinkItemCard.swift in Sources */,
 				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
 				C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */,
 				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,

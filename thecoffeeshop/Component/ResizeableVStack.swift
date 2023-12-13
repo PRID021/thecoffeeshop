@@ -78,27 +78,21 @@ struct OffsetObservingScrollView<Content: View>: View {
 
 struct ResizeableVStack<R:View,  S:View>: View {
     @State private var offSet: CGPoint = CGPoint(x: 0.0, y: 0.0)
-//    @State  var items: [Int] = [0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     @ViewBuilder var contentResizeable: (_ offSet :CGPoint) -> R
     @ViewBuilder var contentScrollable: () -> S
     var body: some View {
         GeometryReader { geo in
             let maxWidth: CGFloat = .infinity
-            let minHeight: CGFloat = geo.size.height/5
+            let minHeight: CGFloat = 150
             let maxHeight: CGFloat = geo.size.height/3
             VStack(spacing: 0) {
-//                Text("Offset: \(offSet.y.clamped(from: 0, to: .infinity))")
                     contentResizeable(offSet)
                     .frame(maxWidth: maxWidth,minHeight: minHeight,maxHeight: max(maxHeight - offSet.y, minHeight))
-                    .background(.yellow)
                 OffsetObservingScrollView(offset: $offSet){
                     contentScrollable()
-                        .frame(minWidth: geo.size.width,  minHeight: geo.size.height - max(maxHeight - offSet.y, minHeight),
-                               maxHeight: geo.size.height - minHeight )
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
-            .background(.blue)
         }
     }
 }

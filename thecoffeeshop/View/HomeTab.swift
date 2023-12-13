@@ -15,16 +15,14 @@ struct HomeTab: View {
     var body: some View {
         GeometryReader { geo in
                 ResizeableVStack{ offset in
-                    
                         VStack(alignment: .leading,spacing: 0) {
-
                             VStack(spacing: 0) {
                                 if (offset.y.clamped(from: 0, to: .infinity) < 10){
                                     UserTitle(address: "Bilzen, Tanjungbalai", image: "woman")
                                         .foregroundColor(.onBackground)
                                         .padding(.horizontal)
                                 }
-                                HStack{
+                                HStack(alignment: .center){
                                     Image(systemName: "magnifyingglass")
                                         .resizable()
                                         .aspectRatio(contentMode: .fit)
@@ -51,12 +49,13 @@ struct HomeTab: View {
                                 }
                                 .foregroundColor(.white)
                                 .background(Color.bgStart ,in:RoundedRectangle(cornerRadius: 15))
-                                .padding(.horizontal,30)
-                                .padding(.vertical)
+                                .padding(.horizontal,offset.y.clamped(from: 0, to: .infinity) < 10 ? 32 : 16)
+                                .padding(.bottom,16)
                             }
-                            .frame(maxWidth: geo.size.width, maxHeight: geo.size.height/4  - offset.y.clamped(from: 0, to: .infinity))
+                            .frame(maxWidth: geo.size.width, maxHeight: max(geo.size.height/4  - offset.y.clamped(from: 0, to: .infinity), 80)  )
                             .background(
                             LinearGradient(colors: [.bgStart, .bgEnd], startPoint: .bottomLeading, endPoint: .topTrailing))
+                            .safeAreaPadding(.top)
                         
                         ScrollViewReader { scrollView in
                             ScrollView(.horizontal){
@@ -105,7 +104,7 @@ struct HomeTab: View {
                             contentScrollable:{
 //                                TabView(selection: $selectedDrinkSection)  {
 //                                    ForEach(drinkSections){drinkSection in
-                                            GridScrollView(drinks: selectedDrinkSection.drinks)
+                                            GridDrinkItemCard(drinks: selectedDrinkSection.drinks)
 //                                            .tag(drinkSection)
                                             .safeAreaPadding(.bottom,64)
 //                                    }
@@ -113,12 +112,9 @@ struct HomeTab: View {
                                 .padding(.horizontal,16)
                                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
                                 .animation(nil, value: UUID())
-                                .background(Color.green)
-
                     }
                 
-                        .background(Color.red)
-            
+                        .background(Color.canvas)
             
         }
         

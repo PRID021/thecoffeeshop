@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct GridScrollView: View {
+struct GridDrinkItemCard: View {
     var drinks: [DrinkItem] = []
     let layout = [
         GridItem(.adaptive(minimum: 150, maximum: 200)),
@@ -34,5 +34,5 @@ struct GridScrollView: View {
             DrinkItem(starRate: 4.8, image: "cappucino", categorie: "Cappucino", toping: "Chocolate", price: 4.53)
         ]
     }
-   return GridScrollView(drinks: drinks)
+   return GridDrinkItemCard(drinks: drinks)
 }
