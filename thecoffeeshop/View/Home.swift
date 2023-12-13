@@ -16,7 +16,7 @@ struct Home: View {
     
     var body: some View {
         TabView(selection: $tabBarViewModel.currentTab){
-            HomeTab(animation: animation)
+            HomeTab( animation: animation)
                 .tag(Tab.home)
                 .toolbar(.hidden, for: .tabBar)
             FavoriteTab()
@@ -39,6 +39,8 @@ struct Home: View {
         }
         .environmentObject(tabBarViewModel)
         .navigationBarBackButtonHidden(true)
+
+  
     }
 }
 

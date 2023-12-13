@@ -101,9 +101,10 @@ struct HomeTab: View {
                         }
                     } 
                         contentScrollable:{ selectedSectionDrink in
-                            GridDrinkItemCard(drinks: selectedSectionDrink.drinks )
+                            GridDrinkItemCard(drinks: selectedSectionDrink.drinks)
                     }
                     .background(Color.canvas)
+              
         }
     }
 }

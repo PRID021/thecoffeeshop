@@ -98,7 +98,6 @@ struct ResizeableVStack<R:View,  S:View>: View {
                             contentScrollable(section)
                                 .padding(.horizontal,16)
                                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-//                                .animation(nil, value: UUID())
                         }.tag(section)
                     }
                     .background(Color.canvas)

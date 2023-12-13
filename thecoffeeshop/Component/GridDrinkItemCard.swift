@@ -24,6 +24,7 @@ struct GridDrinkItemCard: View {
 }
 
 #Preview {
+//    @State var drinkDetail: DrinkItem? = nil
     var drinks: [DrinkItem] {
         [
             DrinkItem(starRate: 4.8, image: "cappucino", categorie: "Cappucino", toping: "Chocolate", price: 4.53),
@@ -34,5 +35,5 @@ struct GridDrinkItemCard: View {
             DrinkItem(starRate: 4.8, image: "cappucino", categorie: "Cappucino", toping: "Chocolate", price: 4.53)
         ]
     }
-   return GridDrinkItemCard(drinks: drinks)
+    return GridDrinkItemCard(drinks: drinks)
 }

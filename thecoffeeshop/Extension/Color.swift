@@ -17,8 +17,10 @@ public extension Color {
     static let onBackground = Color(hex: "#A9A9A9")
     static let canvas = Color(hex: "#FFF5EE")
     static let variant = Color(hex: "#FFFFFF")
+    static let iconBg = Color(hex: "#F9F9F9")
     static let bgStart = Color(hex: "#313131")
     static let bgEnd =  Color(hex: "#131313")
+    
     init(hex: String) {
          var cleanHexCode = hex.trimmingCharacters(in: .whitespacesAndNewlines)
          cleanHexCode = cleanHexCode.replacingOccurrences(of: "#", with: "")

@@ -9,13 +9,14 @@ import SwiftUI
 
 
 struct AdaptiveLabelStyle: LabelStyle {
-
+    var iconColor: Color = .yellow
+    var titleColor: Color = .white
   func makeBody(configuration: Configuration) -> some View {
       HStack {
         configuration.icon
-              .foregroundColor(.yellow)
+              .foregroundColor(iconColor)
         configuration.title
-              .foregroundColor(.white)
+              .foregroundColor(titleColor)
       }
     }
   }
@@ -69,12 +70,16 @@ struct DinkCard: View {
                             .font(.system(size: 18))
                             .fontWeight(.semibold)
                         Spacer()
-                        Label("",systemImage: "plus")
-                            .labelStyle(.iconOnly)
-                            .font(.system(size: 16))
-                            .foregroundColor(.white)
-                            .padding(16)
-                            .background(Color.appPrimary, in: RoundedRectangle(cornerRadius: 10))
+                        
+                     
+                        NavigationLink(destination:  DrinkDetail(drinkDetail: drinkItem)) {
+                            Label("",systemImage: "plus")
+                                .labelStyle(.iconOnly)
+                                .font(.system(size: 16))
+                                .foregroundColor(.white)
+                                .padding(16)
+                                .background(Color.appPrimary, in: RoundedRectangle(cornerRadius: 10))
+                        }
                     }
                     .padding(.bottom,12)
                 }
