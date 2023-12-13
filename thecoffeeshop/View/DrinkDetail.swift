@@ -10,13 +10,11 @@ import SwiftUI
 struct DrinkDetail: View {
     var drinkDetail: DrinkItem
     @State var isFavorite: Bool = false
-    var sizes: [String] = ["S","M","L"]
-    @State var selectedSize: String? = "M"
+    @State var selectedSize: DrinkSize = .m
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     var btnBack : some View { Button(action: {
             self.presentationMode.wrappedValue.dismiss()
             }) {
-
             Image(systemName: "chevron.left")
                 .aspectRatio(contentMode: .fit)
                 .foregroundColor(.black)
@@ -91,7 +89,7 @@ struct DrinkDetail: View {
                 .padding(.bottom, 16)
                 .padding(.top,16)
             HStack {
-                ForEach(sizes, id: \.self){ size in
+                ForEach(DrinkSize.allCases){ size in
                     let isSelected = (size == selectedSize)
                     Button{
                         withAnimation{
@@ -99,7 +97,7 @@ struct DrinkDetail: View {
                         }
                     }label: {
                         
-                            Text(size)
+                        Text(size.rawValue)
                             .frame(minWidth:0, maxWidth: .infinity)
                             .font(.system(size: 18))
                             .padding()
@@ -166,8 +164,5 @@ struct DrinkDetail: View {
 }
 
 #Preview {
-    let drinkDetail = drinkSections[0].drinks[0]
-    return NavigationStack{
-        DrinkDetail(drinkDetail: drinkDetail)
-    }
+    ContentView()
 }

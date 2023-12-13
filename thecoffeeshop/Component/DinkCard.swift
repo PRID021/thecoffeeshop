@@ -95,7 +95,6 @@ struct DinkCard: View {
     let drinkItem = DrinkItem(starRate: 4.8, image: "cappucino", categorie: "Cappucino", toping: "Chocolate", price: 4.53)
     return DinkCard(drinkItem: drinkItem)
         .frame(maxWidth: 150, maxHeight: 250)
-
         .padding()
         .background(Color.black)
 }

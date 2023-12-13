@@ -24,15 +24,15 @@ struct Home: View {
             Text("TAB_C")
                 .tag(Tab.news)
             Text("TAB_D")
-                .tag(Tab.message)
+                .tag(Tab.payment)
         }
 
         .overlay(alignment: .bottom){
             HStack{
                 TabBarButton(tab: .home , image: "cup.and.saucer", animation: animation)
                 TabBarButton(tab: .favorite , image: "heart", animation: animation)
-                TabBarButton(tab: .news , image:  "newspaper", animation: animation)
-                TabBarButton(tab: .message , image: "bell", animation: animation)
+                TabBarButton(tab: .news , image:  "party.popper", animation: animation)
+                TabBarButton(tab: .payment , image: "creditcard", animation: animation)
             }
             .background(Color.bgEnd)
 
@@ -50,7 +50,7 @@ enum Tab: String, CaseIterable {
     case home = "Menu"
     case favorite = "Like"
     case news = "Voucher"
-    case message = "Message"
+    case payment = "Payment"
     
 }
 

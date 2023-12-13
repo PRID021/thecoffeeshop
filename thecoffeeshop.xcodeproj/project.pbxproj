@@ -26,6 +26,8 @@
 		049E08662B27CEA300842B7D /* UserTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E08652B27CEA300842B7D /* UserTitle.swift */; };
 		C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028979E2B295662009A6D5F /* DrinkDetail.swift */; };
 		C02897A12B295AED009A6D5F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A02B295AED009A6D5F /* ModelData.swift */; };
+		C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A22B29B5A5009A6D5F /* DrinkSize.swift */; };
+		C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */; };
 		C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72A62B27FB2C00897D53 /* TextPlaceHolder.swift */; };
 		C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72A92B282E5500897D53 /* DrinkItem.swift */; };
 		C0CE72AC2B2830CC00897D53 /* DinkCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0CE72AB2B2830CC00897D53 /* DinkCard.swift */; };
@@ -73,6 +75,8 @@
 		049E08652B27CEA300842B7D /* UserTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTitle.swift; sourceTree = "<group>"; };
 		C028979E2B295662009A6D5F /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
 		C02897A02B295AED009A6D5F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
+		C02897A22B29B5A5009A6D5F /* DrinkSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSize.swift; sourceTree = "<group>"; };
+		C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuantityPicker.swift; sourceTree = "<group>"; };
 		C0CE72A62B27FB2C00897D53 /* TextPlaceHolder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextPlaceHolder.swift; sourceTree = "<group>"; };
 		C0CE72A92B282E5500897D53 /* DrinkItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkItem.swift; sourceTree = "<group>"; };
 		C0CE72AB2B2830CC00897D53 /* DinkCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinkCard.swift; sourceTree = "<group>"; };
@@ -196,6 +200,7 @@
 				C0CE72AB2B2830CC00897D53 /* DinkCard.swift */,
 				C0CE72AD2B283FA800897D53 /* GridDrinkItemCard.swift */,
 				04045DD72B28B3EC00502577 /* ResizeableVStack.swift */,
+				C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -206,6 +211,7 @@
 				C0CE72A92B282E5500897D53 /* DrinkItem.swift */,
 				C0CE72AF2B284AC700897D53 /* DrinkSection.swift */,
 				C02897A02B295AED009A6D5F /* ModelData.swift */,
+				C02897A22B29B5A5009A6D5F /* DrinkSize.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -345,12 +351,14 @@
 				C02897A12B295AED009A6D5F /* ModelData.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
 				C0CE72AE2B283FA800897D53 /* GridDrinkItemCard.swift in Sources */,
+				C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */,
 				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
 				C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */,
 				C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */,
 				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,
 				04045DD62B28AE8400502577 /* Compareable.swift in Sources */,
 				C0CE72AC2B2830CC00897D53 /* DinkCard.swift in Sources */,
+				C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */,
 				04045DD22B28A21200502577 /* FavoriteTab.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,
