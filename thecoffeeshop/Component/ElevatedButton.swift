@@ -16,7 +16,7 @@ struct ElevatedButton: View {
             Text(title)
                 .frame(minWidth:0, maxWidth: .infinity)
                 .font(.system(size: 18))
-                .padding()
+                .padding(.vertical, 16)
                 .foregroundColor(.onPrimary)
                 .overlay{
                     RoundedRectangle(cornerRadius: cornerRadius)

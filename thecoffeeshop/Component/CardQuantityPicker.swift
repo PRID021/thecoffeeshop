@@ -9,14 +9,15 @@ import SwiftUI
 
 struct CardQuantityPicker: View {
     var drinkItem: DrinkItem
-    @State private var value = 0
+    @Binding  var value: Int
     
     func incrementStep(){
         value+=1
     }
     
     func decrementStep(){
-        value-=1
+        let preferValue = value - 1
+        value = max( preferValue ,0)
     }
     
     var body: some View {
@@ -34,7 +35,31 @@ struct CardQuantityPicker: View {
                     .foregroundColor(.onBackground)
             }
             Spacer()
-
+            HStack {
+          
+                Button {
+                    decrementStep()
+                }label: {
+                    Image(systemName: "minus")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 12, height: 12)
+                        .padding(8)
+                        .background(Circle().stroke(Color.onBackground, lineWidth: 1))
+                }
+                Text("\(value)").padding(.horizontal,8)
+                    .frame(maxWidth: 40)
+                Button{
+                    incrementStep()
+                }label: {
+                    Image(systemName: "plus")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 12, height: 12)
+                        .padding(8)
+                        .background(Circle().stroke(Color.onBackground, lineWidth: 1))
+                }
+            }
         }
         .frame(minWidth: 0, maxWidth: .infinity)
 
@@ -43,7 +68,8 @@ struct CardQuantityPicker: View {
 
 #Preview {
     let drinkItem = drinkSections[0].drinks[0]
-   return CardQuantityPicker(drinkItem: drinkItem)
+    @State var quantity: Int = 0
+    return CardQuantityPicker(drinkItem: drinkItem,value: $quantity)
         .padding(32)
         .frame(width: .infinity, height: .infinity )
         .background(Color.canvas)

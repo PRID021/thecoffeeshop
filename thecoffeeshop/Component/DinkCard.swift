@@ -28,8 +28,10 @@ struct DinkCard: View {
     
             VStack(alignment: .center) {
                 Image(drinkItem.image)
-                    .resizable()
-                    .aspectRatio(141/132,contentMode: .fill)
+                     .resizable()
+                     .scaledToFill()
+                     .frame(width: 141, height: 132, alignment: .center)
+                     .clipped()
                     .cornerRadius(16)
                   
                     .padding(.horizontal,4)

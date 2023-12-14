@@ -11,7 +11,14 @@ struct Home: View {
     @Namespace var animation
     @StateObject var tabBarViewModel = TabBarViewModel()
     init(){
-        UITableView.appearance().isHidden = true
+        let transparentAppearence = UITabBarAppearance()
+        transparentAppearence.configureWithTransparentBackground()
+        UITabBar.appearance().standardAppearance = transparentAppearence
+
+        UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.appPrimary)
+        UISegmentedControl.appearance().backgroundColor = UIColor(Color(hex: "#F2F2F2"))
+        UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
+           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
     }
     
     var body: some View {
@@ -35,7 +42,6 @@ struct Home: View {
                 TabBarButton(tab: .payment , image: "creditcard", animation: animation)
             }
             .background(Color.bgEnd)
-
         }
         .environmentObject(tabBarViewModel)
         .navigationBarBackButtonHidden(true)

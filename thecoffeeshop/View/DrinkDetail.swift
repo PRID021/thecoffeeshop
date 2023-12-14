@@ -24,11 +24,16 @@ struct DrinkDetail: View {
     var body: some View {
         
         VStack (alignment: .leading, spacing: 0){
-            Image(drinkDetail.image)
-                .resizable()
-                .scaledToFit()
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                .padding(.bottom,20)
+            HStack {
+                Spacer()
+                Image(drinkDetail.image)
+                    .resizable()
+                     .scaledToFill()
+                     .frame(width: 250, height: 250, alignment: .center)
+                     .clipped()
+                 .clipShape(RoundedRectangle(cornerRadius: 16))
+                Spacer()
+            }.padding(.bottom,20)
             Text(drinkDetail.categorie)
                 .font(.system(size: 20))
                 .fontWeight(.semibold)
@@ -143,19 +148,21 @@ struct DrinkDetail: View {
                         .foregroundColor(Color.appPrimary)
                 }
                 .padding(.horizontal, 24)
-                ElevatedButton(title: "Buy Now", onPress: { })
+                
+                NavigationLink(destination: OrderPage(drinkDetail: drinkDetail, drinkSize: .m)){
+                    ElevatedButton(title: "Buy Now", onPress: { })
+                        .allowsHitTesting(false)
+                }
             }
             .frame(maxHeight: 88)
             .padding()
-            .background(Color.white)
-            .clipShape(.rect(
+            .background(LinearGradient(colors: [.bgStart, .bgEnd], startPoint: .bottomLeading, endPoint: .topTrailing), in: .rect(
                 topLeadingRadius: 24,
                 bottomLeadingRadius: 0,
                 bottomTrailingRadius: 0,
-                topTrailingRadius: 24
-
-            )
-            )
+                topTrailingRadius: 24,
+                style: RoundedCornerStyle.continuous
+            ))
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
