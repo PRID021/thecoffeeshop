@@ -140,14 +140,7 @@ struct OrderPage: View {
                       
                 }
                 .padding(.horizontal, 16)
-                .background(LinearGradient(colors: [.bgStart, .bgEnd], startPoint: .bottomLeading, endPoint: .topTrailing)
-                            , in:      .rect(
-                                topLeadingRadius: 24,
-                                bottomLeadingRadius: 0,
-                                bottomTrailingRadius: 0,
-                                topTrailingRadius: 24
-                            )
-                )
+                .borderBackgroundWithRadient()
             }
 
             .ignoresSafeArea(.container,edges: .bottom)

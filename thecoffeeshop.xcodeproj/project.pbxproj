@@ -28,6 +28,8 @@
 		C00416082B2BF2670066554C /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00416072B2BF2670066554C /* MyMapView.swift */; };
 		C004160B2B2BFD870066554C /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = C004160A2B2BFD870066554C /* StepperView */; };
 		C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160C2B2C32060066554C /* LinearStepIndicator.swift */; };
+		C004160F2B2C4D6E0066554C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160E2B2C4D6E0066554C /* Image.swift */; };
+		C00416112B2C4FAE0066554C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00416102B2C4FAE0066554C /* Common.swift */; };
 		C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028979E2B295662009A6D5F /* DrinkDetail.swift */; };
 		C02897A12B295AED009A6D5F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A02B295AED009A6D5F /* ModelData.swift */; };
 		C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A22B29B5A5009A6D5F /* DrinkSize.swift */; };
@@ -83,6 +85,8 @@
 		C00416052B2BECA00066554C /* MapPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapPage.swift; sourceTree = "<group>"; };
 		C00416072B2BF2670066554C /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		C004160C2B2C32060066554C /* LinearStepIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearStepIndicator.swift; sourceTree = "<group>"; };
+		C004160E2B2C4D6E0066554C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
+		C00416102B2C4FAE0066554C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C028979E2B295662009A6D5F /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
 		C02897A02B295AED009A6D5F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C02897A22B29B5A5009A6D5F /* DrinkSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSize.swift; sourceTree = "<group>"; };
@@ -204,6 +208,8 @@
 				04564BAB2B27495B00A6D7ED /* Color.swift */,
 				C0CE72A62B27FB2C00897D53 /* TextPlaceHolder.swift */,
 				04045DD52B28AE8400502577 /* Compareable.swift */,
+				C004160E2B2C4D6E0066554C /* Image.swift */,
+				C00416102B2C4FAE0066554C /* Common.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -384,6 +390,7 @@
 				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
 				C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */,
 				C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */,
+				C00416112B2C4FAE0066554C /* Common.swift in Sources */,
 				C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */,
 				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,
 				04045DD62B28AE8400502577 /* Compareable.swift in Sources */,
@@ -393,6 +400,7 @@
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,
 				C00416082B2BF2670066554C /* MyMapView.swift in Sources */,
+				C004160F2B2C4D6E0066554C /* Image.swift in Sources */,
 				04564BB12B27544F00A6D7ED /* Home.swift in Sources */,
 				04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */,
 				04564BA92B27464E00A6D7ED /* Landing.swift in Sources */,

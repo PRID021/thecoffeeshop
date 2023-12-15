@@ -156,13 +156,7 @@ struct DrinkDetail: View {
             }
             .frame(maxHeight: 88)
             .padding()
-            .background(LinearGradient(colors: [.bgStart, .bgEnd], startPoint: .bottomLeading, endPoint: .topTrailing), in: .rect(
-                topLeadingRadius: 24,
-                bottomLeadingRadius: 0,
-                bottomTrailingRadius: 0,
-                topTrailingRadius: 24,
-                style: RoundedCornerStyle.continuous
-            ))
+            .borderBackgroundWithRadient()
         }
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)

@@ -58,10 +58,8 @@ struct MapPage: View {
 
                     HStack(alignment: .center) {
                         Image("bike")
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 32,height:32)
-                            .padding(15)
-                            .background(RoundedRectangle(cornerRadius: 16).stroke(Color(hex: "#EAEAEA"), lineWidth: 2))
+                            .roundedRect()
+                        
                         VStack(alignment: .leading,spacing: 0){
                             Text("Delivered your order")
                                 .font(.system(size: 14,weight: .semibold))
@@ -92,22 +90,14 @@ struct MapPage: View {
                         }
                         Spacer()
                         Image("telpon")
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 32,height:32)
-                            .padding(15)
-                            .background(RoundedRectangle(cornerRadius: 16).stroke(Color(hex: "#EAEAEA"), lineWidth: 2))
+                            .roundedRect()
                     }
                     .padding(.horizontal,30)
                     .padding(.bottom,16)
                 }
                 .foregroundColor(.white)
                 .frame(width: geo.size.width, height: geo.size.height*1/3 + 24)
-                .background(Color.bgStart, in: .rect(
-                    topLeadingRadius: 24,
-                    bottomLeadingRadius: 0,
-                    bottomTrailingRadius: 0,
-                    topTrailingRadius: 24
-                ))
+                .borderBackgroundWithRadient()
                 .offset(x:0,y:-24)
             }
         }
