@@ -31,13 +31,6 @@ struct OrderPage: View {
             
             Group {
                 
-//                Picker("Wich is your favor?", selection: $selectedOrderType) {
-//                    ForEach(OrderPage.orderTypes, id: \.self) { type in
-//                                    Text(type)
-//                                }
-//                           }
-//                           .pickerStyle(.segmented)
-//                           .labelsHidden()
                 SegmentPicker()
                 Text("Delivery Address")
                     .font(.system(size: 16, weight: .semibold))
@@ -138,10 +131,12 @@ struct OrderPage: View {
                         Image("dots")
                     }
                     .padding(.vertical,16)
-                    ElevatedButton(title: "Buy Now", onPress: { })
-                        .allowsHitTesting(true)
-                        .padding(.bottom, 32)
-                    
+           
+                    NavigationLink(destination: MapPage()){
+                        ElevatedButton(title: "Order", onPress: { })
+                            .allowsHitTesting(false)
+                            .padding(.bottom, 32)
+                    }
                       
                 }
                 .padding(.horizontal, 16)
@@ -181,7 +176,7 @@ struct PriceLabel: View{
 
 
 #Preview {
-    var drinkItem: DrinkItem = drinkSections[0].drinks[0]
+    let drinkItem: DrinkItem = drinkSections[0].drinks[0]
     return OrderPage(drinkDetail: drinkItem,drinkSize: .m)
 //    ContentView()
 }
