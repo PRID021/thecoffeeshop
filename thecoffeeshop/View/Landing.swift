@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct Landing: View {
+    
     var body: some View {
         VStack{
             Spacer()
@@ -42,8 +43,6 @@ struct Landing: View {
                 .background(Color.black)
         )
     }
-    
-        
 }
 
 #Preview {

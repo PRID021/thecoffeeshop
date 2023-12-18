@@ -46,6 +46,7 @@ struct CardQuantityPicker: View {
                         .frame(width: 12, height: 12)
                         .padding(8)
                         .background(Circle().stroke(Color.onBackground, lineWidth: 1))
+                        .foregroundColor(Color.appPrimary)
                 }
                 Text("\(value)").padding(.horizontal,8)
                     .frame(maxWidth: 40)
@@ -58,6 +59,7 @@ struct CardQuantityPicker: View {
                         .frame(width: 12, height: 12)
                         .padding(8)
                         .background(Circle().stroke(Color.onBackground, lineWidth: 1))
+                        .foregroundColor(Color.appPrimary)
                 }
             }
         }

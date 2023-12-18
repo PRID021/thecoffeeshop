@@ -7,10 +7,14 @@
 
 import SwiftUI
 
-struct ContentView: View {
 
+
+struct ContentView: View {
+   @State private var path = NavigationPath()
+    
     var body: some View {
-        NavigationStack{
+        
+        NavigationStack(path: $path){
             Landing()
         }
     }

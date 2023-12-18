@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import MapKit
 
 struct OrderPage: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
@@ -26,7 +27,11 @@ struct OrderPage: View {
     @State private var value: Int = 0
     static private var orderTypes = ["Deliver","Pick Up"]
     @State private var selectPaymentMethod = "Cash"
+    @State private var  orderLocation = MKMapItem(placemark:  MKPlacemark(coordinate: .orderLocation))
+    
     var body: some View {
+        
+        
         VStack(alignment: .leading, spacing: 0){
             
             Group {
@@ -132,7 +137,7 @@ struct OrderPage: View {
                     }
                     .padding(.vertical,16)
            
-                    NavigationLink(destination: MapPage()){
+                    NavigationLink(destination:  TrackingMap(orderLocation:$orderLocation)){
                         ElevatedButton(title: "Order", onPress: { })
                             .allowsHitTesting(false)
                             .padding(.bottom, 32)
@@ -171,7 +176,6 @@ struct PriceLabel: View{
 #Preview {
     let drinkItem: DrinkItem = drinkSections[0].drinks[0]
     return OrderPage(drinkDetail: drinkItem,drinkSize: .m)
-//    ContentView()
 }
 
 
