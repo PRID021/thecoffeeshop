@@ -11,6 +11,7 @@ struct HomeTab: View {
     
     @State var searchInput: String = ""
     @State var selectedDrinkSection = drinkSections[0]
+    @State var shouldExpand = false
     var animation: Namespace.ID
     var body: some View {
         GeometryReader { geo in
@@ -51,6 +52,7 @@ struct HomeTab: View {
                                 .background(Color.bgStart ,in:RoundedRectangle(cornerRadius: 15))
                                 .padding(.horizontal,offset.y.clamped(from: 0, to: .infinity) < 10 ? 32 : 16)
                                 .padding(.bottom,16)
+    
                             }
                             .frame(maxWidth: geo.size.width, maxHeight: max(geo.size.height/4  - offset.y.clamped(from: 0, to: .infinity), 80)  )
                             .background(

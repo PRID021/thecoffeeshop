@@ -22,14 +22,11 @@ struct Landing: View {
                 .font(.system(size: 14))
                 .foregroundColor(.onBackground)
                 .padding(.horizontal,48)
-            NavigationLink{
-                    Home()
-                }
-                label: {
-                    ElevatedButton(title: "Get Started", onPress:  {})
-                        .allowsHitTesting(false)
-                        .padding()
-                }
+            NavigationLink(value: Route.home){
+                ElevatedButton(title: "Get Started", onPress:  {})
+                    .allowsHitTesting(false)
+                    .padding()
+            }
         }
         .padding(.bottom)
         .frame(maxWidth: .infinity, maxHeight:  .infinity)

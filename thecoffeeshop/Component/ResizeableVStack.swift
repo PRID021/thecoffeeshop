@@ -48,6 +48,7 @@ struct OffsetObservingScrollView<Content: View>: View {
     var axes: Axis.Set = [.vertical]
     var showsIndicators = false
     @Binding var offset: CGPoint
+    @Binding var maxY: CGFloat
     @ViewBuilder var content: () -> Content
 
     // The name of our coordinate space doesn't have to be
@@ -63,6 +64,7 @@ struct OffsetObservingScrollView<Content: View>: View {
                 position: Binding(
                     get: { offset },
                     set: { newOffset in
+                        maxY = max( -newOffset.y, maxY)
                         offset = CGPoint(
                             x: -newOffset.x,
                             y: -newOffset.y)
@@ -83,21 +85,23 @@ struct ResizeableVStack<R:View,  S:View>: View {
     @ViewBuilder var contentResizeable: (_ offSet :CGPoint) -> R
     @ViewBuilder var contentScrollable: (_ selectedSection: DrinkSection) -> S
     
-
+    @State private var maxY: CGFloat = 0
+    
     var body: some View {
         GeometryReader { geo in
-            let maxWidth: CGFloat = .infinity
+
             let minHeight: CGFloat = 150
             let maxHeight: CGFloat = geo.size.height/3
             VStack(spacing: 0) {
-                    contentResizeable(offSet)
-                    .frame(maxWidth: maxWidth,minHeight: minHeight,maxHeight: max(maxHeight - offSet.y, minHeight))
+                contentResizeable(offSet)
+                    .frame(height: max(maxHeight - maxY, minHeight))
                 TabView (selection: $seletedSectionDrink){
                     ForEach(sections){ section in
-                        OffsetObservingScrollView(offset: $offSet){
+                        OffsetObservingScrollView(offset: $offSet, maxY: $maxY){
                             contentScrollable(section)
                                 .padding(.horizontal,16)
                                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
+             
                         }.tag(section)
                     }
                     .background(Color.canvas)

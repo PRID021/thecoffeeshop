@@ -19,18 +19,18 @@ extension CLLocationCoordinate2D {
 
 struct TrackingMap: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    var btnBack : some View { Button(action: {
-                self.presentationMode.wrappedValue.dismiss()
-                }) {
-                    Button {
-                   
-                    }label: {
-                        Image(systemName: "chevron.left")
-                            .aspectRatio(contentMode: .fit)
-                            .foregroundColor(.white)
-                            .frame(width: 44, height: 44)
-                        }
-                    }
+    @EnvironmentObject var nav: NavigationStackState
+    var btnBack : some View {
+        
+            Button {
+                nav.popTopRoot()
+                
+            }label: {
+                Image(systemName: "chevron.left")
+                    .aspectRatio(contentMode: .fit)
+                    .foregroundColor(.white)
+                    .frame(width: 44, height: 44)
+                }
             }
         
     @State private var route: MKRoute?

@@ -11,6 +11,8 @@
 		04045DD42B28A67800502577 /* SizePreferenceKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04045DD32B28A67800502577 /* SizePreferenceKey.swift */; };
 		04045DD62B28AE8400502577 /* Compareable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04045DD52B28AE8400502577 /* Compareable.swift */; };
 		04045DD82B28B3EC00502577 /* ResizeableVStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04045DD72B28B3EC00502577 /* ResizeableVStack.swift */; };
+		0436FF902B306DEA0034438D /* NavigationStackState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436FF8F2B306DEA0034438D /* NavigationStackState.swift */; };
+		0436FF922B3084A00034438D /* Route.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0436FF912B3084A00034438D /* Route.swift */; };
 		04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564B7D2B27456700A6D7ED /* thecoffeeshopApp.swift */; };
 		04564B802B27456700A6D7ED /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564B7F2B27456700A6D7ED /* ContentView.swift */; };
 		04564B822B27456800A6D7ED /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04564B812B27456800A6D7ED /* Assets.xcassets */; };
@@ -66,6 +68,8 @@
 		04045DD32B28A67800502577 /* SizePreferenceKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SizePreferenceKey.swift; sourceTree = "<group>"; };
 		04045DD52B28AE8400502577 /* Compareable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Compareable.swift; sourceTree = "<group>"; };
 		04045DD72B28B3EC00502577 /* ResizeableVStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResizeableVStack.swift; sourceTree = "<group>"; };
+		0436FF8F2B306DEA0034438D /* NavigationStackState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationStackState.swift; sourceTree = "<group>"; };
+		0436FF912B3084A00034438D /* Route.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Route.swift; sourceTree = "<group>"; };
 		04564B7A2B27456700A6D7ED /* thecoffeeshop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = thecoffeeshop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		04564B7D2B27456700A6D7ED /* thecoffeeshopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = thecoffeeshopApp.swift; sourceTree = "<group>"; };
 		04564B7F2B27456700A6D7ED /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -156,6 +160,7 @@
 				04564BA72B27464100A6D7ED /* View */,
 				04564B7D2B27456700A6D7ED /* thecoffeeshopApp.swift */,
 				04564B7F2B27456700A6D7ED /* ContentView.swift */,
+				0436FF912B3084A00034438D /* Route.swift */,
 				04564B812B27456800A6D7ED /* Assets.xcassets */,
 				04564B832B27456800A6D7ED /* Preview Content */,
 			);
@@ -238,6 +243,7 @@
 				C0CE72AF2B284AC700897D53 /* DrinkSection.swift */,
 				C02897A02B295AED009A6D5F /* ModelData.swift */,
 				C02897A22B29B5A5009A6D5F /* DrinkSize.swift */,
+				0436FF8F2B306DEA0034438D /* NavigationStackState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -380,6 +386,7 @@
 			files = (
 				04564B802B27456700A6D7ED /* ContentView.swift in Sources */,
 				C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */,
+				0436FF922B3084A00034438D /* Route.swift in Sources */,
 				C02897A12B295AED009A6D5F /* ModelData.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
 				C0CE72AE2B283FA800897D53 /* GridDrinkItemCard.swift in Sources */,
@@ -398,6 +405,7 @@
 				C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */,
 				04045DD22B28A21200502577 /* FavoriteTab.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
+				0436FF902B306DEA0034438D /* NavigationStackState.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,
 				C00416082B2BF2670066554C /* MyMapView.swift in Sources */,
 				C004160F2B2C4D6E0066554C /* Image.swift in Sources */,
