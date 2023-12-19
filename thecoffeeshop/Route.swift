@@ -6,13 +6,14 @@
 //
 
 import Foundation
+import MapKit
 
 enum Route {
   
     case home
     case drinkDetail(DrinkItem)
     case order(DrinkItem,DrinkSize)
-    case orderTracking
+    case orderTracking(MKMapItem)
 }
 
 extension Route: Hashable {
@@ -25,8 +26,8 @@ extension Route: Hashable {
         case .order(let drinkItem, let drinkSize):
             hasher.combine(drinkItem)
             hasher.combine(drinkSize)
-        case .orderTracking:
-            hasher.combine("orderTracking")
+        case .orderTracking(let orderLocation):
+            hasher.combine(orderLocation)
         }
 
     }

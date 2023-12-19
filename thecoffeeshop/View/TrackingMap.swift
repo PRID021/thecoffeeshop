@@ -23,7 +23,7 @@ struct TrackingMap: View {
     var btnBack : some View {
         
             Button {
-                nav.popTopRoot()
+                nav.popToHome()
                 
             }label: {
                 Image(systemName: "chevron.left")

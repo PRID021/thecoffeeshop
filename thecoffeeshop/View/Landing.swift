@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct Landing: View {
-    
+    @EnvironmentObject var nav: NavigationStackState
     var body: some View {
         VStack{
             Spacer()
@@ -22,11 +22,12 @@ struct Landing: View {
                 .font(.system(size: 14))
                 .foregroundColor(.onBackground)
                 .padding(.horizontal,48)
-            NavigationLink(value: Route.home){
-                ElevatedButton(title: "Get Started", onPress:  {})
-                    .allowsHitTesting(false)
-                    .padding()
-            }
+
+            ElevatedButton(title: "Get Started", onPress:  {
+                nav.path.append(.home)
+                print("nav : \(nav.path.count)")
+            })
+            .padding()
         }
         .padding(.bottom)
         .frame(maxWidth: .infinity, maxHeight:  .infinity)

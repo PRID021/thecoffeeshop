@@ -12,6 +12,7 @@ struct DrinkDetail: View {
     @State var isFavorite: Bool = false
     @State var selectedSize: DrinkSize = .m
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
+    @EnvironmentObject var nav: NavigationStackState
     var btnBack : some View { Button(action: {
             self.presentationMode.wrappedValue.dismiss()
             }) {
@@ -148,11 +149,10 @@ struct DrinkDetail: View {
                         .foregroundColor(Color.appPrimary)
                 }
                 .padding(.horizontal, 24)
-                
-                NavigationLink(destination: OrderPage(drinkDetail: drinkDetail, drinkSize: .m)){
-                    ElevatedButton(title: "Buy Now", onPress: { })
-                        .allowsHitTesting(false)
-                }
+                ElevatedButton(title: "Buy Now", onPress: {
+                    nav.path.append(.order(drinkDetail, .m))
+                })
+                   
             }
             .frame(maxHeight: 88)
             .padding()

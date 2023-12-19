@@ -10,7 +10,7 @@ import MapKit
 
 struct OrderPage: View {
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
-    
+    @EnvironmentObject var nav: NavigationStackState
     var btnBack : some View { Button(action: {
             self.presentationMode.wrappedValue.dismiss()
             }) {
@@ -137,11 +137,11 @@ struct OrderPage: View {
                     }
                     .padding(.vertical,16)
            
-                    NavigationLink(destination:  TrackingMap(orderLocation:$orderLocation)){
-                        ElevatedButton(title: "Order", onPress: { })
-                            .allowsHitTesting(false)
-                            .padding(.bottom, 32)
-                    }
+                    ElevatedButton(title: "Order", onPress: {
+                        nav.path.append(.orderTracking(orderLocation))
+                    })
+            
+                        .padding(.bottom, 32)
                       
                 }
                 .padding(.horizontal, 16)

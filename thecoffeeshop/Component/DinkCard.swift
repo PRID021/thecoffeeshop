@@ -24,6 +24,7 @@ struct AdaptiveLabelStyle: LabelStyle {
 
 struct DinkCard: View {
     var drinkItem: DrinkItem
+    @EnvironmentObject var nav: NavigationStackState
     var body: some View {
     
             VStack(alignment: .center) {
@@ -73,8 +74,9 @@ struct DinkCard: View {
                             .fontWeight(.semibold)
                         Spacer()
                         
-                     
-                        NavigationLink(destination:  DrinkDetail(drinkDetail: drinkItem)) {
+                        Button {
+                            nav.path.append(.drinkDetail(drinkItem))
+                        }label: {
                             Label("",systemImage: "plus")
                                 .labelStyle(.iconOnly)
                                 .font(.system(size: 16))

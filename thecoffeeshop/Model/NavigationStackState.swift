@@ -19,20 +19,7 @@ class NavigationStackState: ObservableObject {
         
     }
     init(){
-        if let data = Self.readSerializeData(){
-            do{
-                let representation = try JSONDecoder().decode(
-                    NavigationPath.CodableRepresentation.self,
-                    from:  data
-                )
-                self.path = []
-            } catch {
-                self.path = []
-            }
-        }
-        else {
-            self.path = []
-        }
+        self.path = []
     }
     func save(){
 
@@ -40,9 +27,9 @@ class NavigationStackState: ObservableObject {
     
     func popTopRoot(){
         path = []
-        print("popTopRoot")
+        
     }
     func popToHome(){
-        
+        path = [.home]
     }
 }
