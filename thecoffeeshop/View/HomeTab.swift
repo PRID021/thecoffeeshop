@@ -15,7 +15,11 @@ struct HomeTab: View {
     var animation: Namespace.ID
     var body: some View {
         GeometryReader { geo in
-            ResizeableVStack(seletedSectionDrink: $selectedDrinkSection,sections: drinkSections ){ offset in
+            ResizeableVStack(
+                geo: geo,
+                seletedSectionDrink: $selectedDrinkSection,
+                sections: drinkSections
+            ){ offset in
                         VStack(alignment: .leading,spacing: 0) {
                             VStack(spacing: 0) {
                                 if (offset.y.clamped(from: 0, to: .infinity) < 10){
@@ -51,14 +55,13 @@ struct HomeTab: View {
                                 .foregroundColor(.white)
                                 .background(Color.bgStart ,in:RoundedRectangle(cornerRadius: 15))
                                 .padding(.horizontal,offset.y.clamped(from: 0, to: .infinity) < 10 ? 32 : 16)
-                                .padding(.bottom,16)
-    
+                                
                             }
+
                             .frame(maxWidth: geo.size.width, maxHeight: max(geo.size.height/4  - offset.y.clamped(from: 0, to: .infinity), 80)  )
                             .background(
                             LinearGradient(colors: [.bgStart, .bgEnd], startPoint: .bottomLeading, endPoint: .topTrailing))
-                            .safeAreaPadding(.top)
-                        
+        
                         ScrollViewReader { scrollView in
                             ScrollView(.horizontal){
                                 LazyHStack(spacing: 8) {
@@ -105,9 +108,12 @@ struct HomeTab: View {
                         contentScrollable:{ selectedSectionDrink in
                             GridDrinkItemCard(drinks: selectedSectionDrink.drinks)
                     }
+
                     .background(Color.canvas)
+            
               
         }
+        
     }
 }
 #Preview {

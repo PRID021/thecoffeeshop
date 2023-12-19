@@ -48,7 +48,6 @@ struct OffsetObservingScrollView<Content: View>: View {
     var axes: Axis.Set = [.vertical]
     var showsIndicators = false
     @Binding var offset: CGPoint
-    @Binding var maxY: CGFloat
     @ViewBuilder var content: () -> Content
 
     // The name of our coordinate space doesn't have to be
@@ -64,7 +63,6 @@ struct OffsetObservingScrollView<Content: View>: View {
                 position: Binding(
                     get: { offset },
                     set: { newOffset in
-                        maxY = max( -newOffset.y, maxY)
                         offset = CGPoint(
                             x: -newOffset.x,
                             y: -newOffset.y)
@@ -79,25 +77,20 @@ struct OffsetObservingScrollView<Content: View>: View {
 
 
 struct ResizeableVStack<R:View,  S:View>: View {
+    var geo: GeometryProxy
     @Binding var seletedSectionDrink: DrinkSection
     var sections: [DrinkSection]
     @State private var offSet: CGPoint = CGPoint(x: 0.0, y: 0.0)
     @ViewBuilder var contentResizeable: (_ offSet :CGPoint) -> R
     @ViewBuilder var contentScrollable: (_ selectedSection: DrinkSection) -> S
     
-    @State private var maxY: CGFloat = 0
-    
+  
     var body: some View {
-        GeometryReader { geo in
-
-            let minHeight: CGFloat = 150
-            let maxHeight: CGFloat = geo.size.height/3
             VStack(spacing: 0) {
                 contentResizeable(offSet)
-                    .frame(height: max(maxHeight - maxY, minHeight))
                 TabView (selection: $seletedSectionDrink){
                     ForEach(sections){ section in
-                        OffsetObservingScrollView(offset: $offSet, maxY: $maxY){
+                        OffsetObservingScrollView(offset: $offSet){
                             contentScrollable(section)
                                 .padding(.horizontal,16)
                                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
@@ -108,6 +101,6 @@ struct ResizeableVStack<R:View,  S:View>: View {
                 }
             }
             .frame(width: geo.size.width, height: geo.size.height)
-        }
+        
     }
 }

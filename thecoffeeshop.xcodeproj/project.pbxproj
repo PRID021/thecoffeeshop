@@ -26,7 +26,6 @@
 		04564BB12B27544F00A6D7ED /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BB02B27544F00A6D7ED /* Home.swift */; };
 		04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BB22B275AEA00A6D7ED /* HomeTab.swift */; };
 		049E08662B27CEA300842B7D /* UserTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E08652B27CEA300842B7D /* UserTitle.swift */; };
-		C00416082B2BF2670066554C /* MyMapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00416072B2BF2670066554C /* MyMapView.swift */; };
 		C004160B2B2BFD870066554C /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = C004160A2B2BFD870066554C /* StepperView */; };
 		C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160C2B2C32060066554C /* LinearStepIndicator.swift */; };
 		C004160F2B2C4D6E0066554C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160E2B2C4D6E0066554C /* Image.swift */; };
@@ -86,7 +85,6 @@
 		04564BB02B27544F00A6D7ED /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		04564BB22B275AEA00A6D7ED /* HomeTab.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTab.swift; sourceTree = "<group>"; };
 		049E08652B27CEA300842B7D /* UserTitle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTitle.swift; sourceTree = "<group>"; };
-		C00416072B2BF2670066554C /* MyMapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMapView.swift; sourceTree = "<group>"; };
 		C004160C2B2C32060066554C /* LinearStepIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearStepIndicator.swift; sourceTree = "<group>"; };
 		C004160E2B2C4D6E0066554C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		C00416102B2C4FAE0066554C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
@@ -230,7 +228,6 @@
 				C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */,
 				C0B6AF0C2B2ABE3400EA918A /* CustomDivider.swift */,
 				C0B6AF0E2B2AF35900EA918A /* SegmentPicker.swift */,
-				C00416072B2BF2670066554C /* MyMapView.swift */,
 				C004160C2B2C32060066554C /* LinearStepIndicator.swift */,
 			);
 			path = Component;
@@ -407,7 +404,6 @@
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				0436FF902B306DEA0034438D /* NavigationStackState.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,
-				C00416082B2BF2670066554C /* MyMapView.swift in Sources */,
 				C004160F2B2C4D6E0066554C /* Image.swift in Sources */,
 				04564BB12B27544F00A6D7ED /* Home.swift in Sources */,
 				04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */,
