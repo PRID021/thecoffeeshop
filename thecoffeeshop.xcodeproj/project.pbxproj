@@ -34,6 +34,13 @@
 		C02897A12B295AED009A6D5F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A02B295AED009A6D5F /* ModelData.swift */; };
 		C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A22B29B5A5009A6D5F /* DrinkSize.swift */; };
 		C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */; };
+		C0371CF72B3150A0004F5FEB /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */; };
+		C0371CF92B31521E004F5FEB /* UserEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371CF82B31521E004F5FEB /* UserEndpoint.swift */; };
+		C0371CFB2B3154CF004F5FEB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371CFA2B3154CF004F5FEB /* APIClient.swift */; };
+		C0371CFF2B316AE5004F5FEB /* UserService.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371CFE2B316AE5004F5FEB /* UserService.swift */; };
+		C0371D022B316B32004F5FEB /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371D012B316B32004F5FEB /* UserProfile.swift */; };
+		C0371D052B316E91004F5FEB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371D042B316E91004F5FEB /* UserViewModel.swift */; };
+		C0371D072B31704E004F5FEB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371D062B31704E004F5FEB /* UserProfileView.swift */; };
 		C08BFFB52B2FFB6000541A63 /* TrackingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08BFFB42B2FFB6000541A63 /* TrackingMap.swift */; };
 		C0B6AF0B2B2AA4CD00EA918A /* OrderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6AF0A2B2AA4CD00EA918A /* OrderPage.swift */; };
 		C0B6AF0D2B2ABE3400EA918A /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6AF0C2B2ABE3400EA918A /* CustomDivider.swift */; };
@@ -92,6 +99,13 @@
 		C02897A02B295AED009A6D5F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C02897A22B29B5A5009A6D5F /* DrinkSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSize.swift; sourceTree = "<group>"; };
 		C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuantityPicker.swift; sourceTree = "<group>"; };
+		C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
+		C0371CF82B31521E004F5FEB /* UserEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserEndpoint.swift; sourceTree = "<group>"; };
+		C0371CFA2B3154CF004F5FEB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C0371CFE2B316AE5004F5FEB /* UserService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserService.swift; sourceTree = "<group>"; };
+		C0371D012B316B32004F5FEB /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
+		C0371D042B316E91004F5FEB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
+		C0371D062B31704E004F5FEB /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
 		C08BFFB42B2FFB6000541A63 /* TrackingMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingMap.swift; sourceTree = "<group>"; };
 		C0B6AF0A2B2AA4CD00EA918A /* OrderPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPage.swift; sourceTree = "<group>"; };
 		C0B6AF0C2B2ABE3400EA918A /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
@@ -152,9 +166,11 @@
 		04564B7C2B27456700A6D7ED /* thecoffeeshop */ = {
 			isa = PBXGroup;
 			children = (
-				C0CE72A82B282E1400897D53 /* Model */,
-				04564BAD2B274EC700A6D7ED /* Component */,
-				04564BAA2B27494800A6D7ED /* Modifier */,
+				C0371CFD2B315A65004F5FEB /* Service */,
+				C0371D032B316E3F004F5FEB /* Utils */,
+				C0371D002B316B1A004F5FEB /* Domain */,
+				C0371CF52B315065004F5FEB /* Network */,
+				C0CE72A82B282E1400897D53 /* ViewModel */,
 				04564BA72B27464100A6D7ED /* View */,
 				04564B7D2B27456700A6D7ED /* thecoffeeshopApp.swift */,
 				04564B7F2B27456700A6D7ED /* ContentView.swift */,
@@ -200,6 +216,7 @@
 				04045DD12B28A21200502577 /* FavoriteTab.swift */,
 				C028979E2B295662009A6D5F /* DrinkDetail.swift */,
 				C0B6AF0A2B2AA4CD00EA918A /* OrderPage.swift */,
+				C0371D062B31704E004F5FEB /* UserProfileView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -233,7 +250,50 @@
 			path = Component;
 			sourceTree = "<group>";
 		};
-		C0CE72A82B282E1400897D53 /* Model */ = {
+		C0371CF52B315065004F5FEB /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				C0371CFC2B315A56004F5FEB /* Data */,
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		C0371CFC2B315A56004F5FEB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */,
+				C0371CF82B31521E004F5FEB /* UserEndpoint.swift */,
+				C0371CFA2B3154CF004F5FEB /* APIClient.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		C0371CFD2B315A65004F5FEB /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				C0371CFE2B316AE5004F5FEB /* UserService.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		C0371D002B316B1A004F5FEB /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				C0371D012B316B32004F5FEB /* UserProfile.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		C0371D032B316E3F004F5FEB /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				04564BAD2B274EC700A6D7ED /* Component */,
+				04564BAA2B27494800A6D7ED /* Modifier */,
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		C0CE72A82B282E1400897D53 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				C0CE72A92B282E5500897D53 /* DrinkItem.swift */,
@@ -241,8 +301,9 @@
 				C02897A02B295AED009A6D5F /* ModelData.swift */,
 				C02897A22B29B5A5009A6D5F /* DrinkSize.swift */,
 				0436FF8F2B306DEA0034438D /* NavigationStackState.swift */,
+				C0371D042B316E91004F5FEB /* UserViewModel.swift */,
 			);
-			path = Model;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -383,24 +444,31 @@
 			files = (
 				04564B802B27456700A6D7ED /* ContentView.swift in Sources */,
 				C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */,
+				C0371D022B316B32004F5FEB /* UserProfile.swift in Sources */,
 				0436FF922B3084A00034438D /* Route.swift in Sources */,
 				C02897A12B295AED009A6D5F /* ModelData.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
+				C0371CFB2B3154CF004F5FEB /* APIClient.swift in Sources */,
+				C0371CFF2B316AE5004F5FEB /* UserService.swift in Sources */,
 				C0CE72AE2B283FA800897D53 /* GridDrinkItemCard.swift in Sources */,
 				C0B6AF0B2B2AA4CD00EA918A /* OrderPage.swift in Sources */,
+				C0371D072B31704E004F5FEB /* UserProfileView.swift in Sources */,
 				C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */,
 				C0B6AF0D2B2ABE3400EA918A /* CustomDivider.swift in Sources */,
 				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
 				C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */,
 				C08BFFB52B2FFB6000541A63 /* TrackingMap.swift in Sources */,
 				C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */,
+				C0371CF92B31521E004F5FEB /* UserEndpoint.swift in Sources */,
 				C00416112B2C4FAE0066554C /* Common.swift in Sources */,
+				C0371CF72B3150A0004F5FEB /* APIEndpoint.swift in Sources */,
 				C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */,
 				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,
 				04045DD62B28AE8400502577 /* Compareable.swift in Sources */,
 				C0CE72AC2B2830CC00897D53 /* DinkCard.swift in Sources */,
 				C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */,
 				04045DD22B28A21200502577 /* FavoriteTab.swift in Sources */,
+				C0371D052B316E91004F5FEB /* UserViewModel.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				0436FF902B306DEA0034438D /* NavigationStackState.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,

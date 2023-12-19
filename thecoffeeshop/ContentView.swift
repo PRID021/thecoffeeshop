@@ -29,7 +29,10 @@ struct ContentView: View {
                         OrderPage(drinkDetail: drinkItem, drinkSize: drinkSize)
                     case .orderTracking:
                         TrackingMap(orderLocation: $orderLocation)
+                    case .userProfile:
+                        UserProfileView()
                     }
+                
                 
                 }
         }

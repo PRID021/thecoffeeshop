@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 struct UserTitle : View {
+    @EnvironmentObject var nav: NavigationStackState
     var  address: String
     var  image: String
     var body: some View {
@@ -22,11 +23,17 @@ struct UserTitle : View {
                 }
             }
             Spacer()
-            Image(image)
-                .resizable()
-                .aspectRatio(contentMode: .fit)
-                .clipShape(RoundedRectangle(cornerRadius: 15))
-                .frame(width: 48)
+            
+            Button{
+                nav.path.append(.userProfile)
+            }label: {
+                Image(image)
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+                    .clipShape(RoundedRectangle(cornerRadius: 15))
+                    .frame(width: 48)
+            }
+    
         }
         .padding()
         

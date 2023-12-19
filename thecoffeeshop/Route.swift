@@ -14,6 +14,7 @@ enum Route {
     case drinkDetail(DrinkItem)
     case order(DrinkItem,DrinkSize)
     case orderTracking(MKMapItem)
+    case userProfile
 }
 
 extension Route: Hashable {
@@ -28,6 +29,8 @@ extension Route: Hashable {
             hasher.combine(drinkSize)
         case .orderTracking(let orderLocation):
             hasher.combine(orderLocation)
+        case .userProfile:
+            hasher.combine("userProfile")
         }
 
     }
