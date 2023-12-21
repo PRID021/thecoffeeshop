@@ -24,10 +24,14 @@ struct OrderPage: View {
     var drinkSize: DrinkSize
     
     @State private var selectedOrderType:String = "Deliver"
-    @State private var value: Int = 0
+    @State private var value: Int = 1
     static private var orderTypes = ["Deliver","Pick Up"]
     @State private var selectPaymentMethod = "Cash"
+    
     @State private var  orderLocation = MKMapItem(placemark:  MKPlacemark(coordinate: .orderLocation))
+    private var totalPrice: CGFloat {
+        CGFloat(value) * drinkDetail.price + CGFloat(1)
+    }
     
     var body: some View {
         
@@ -103,16 +107,12 @@ struct OrderPage: View {
                 PriceLabel(label: "Delivery Fee", price: 1.0, rawPrice: 2.0)
                 Divider()
                     .padding(.vertical,16)
-                PriceLabel(label: "Total Payment", price: 5.53)
-                
-  
-                
+                PriceLabel(label: "Total Payment", price: totalPrice)
             }
             .padding(.horizontal,32)
             
             Spacer()
         }
-          
             .padding(.top)
             .navigationBarBackButtonHidden(true)
             .navigationBarItems(leading: btnBack)
@@ -125,13 +125,13 @@ struct OrderPage: View {
                     HStack(alignment: .center) {
                         Image("moneys")
                         Picker("Wich is your favor?", selection: $selectPaymentMethod) {
-                            ForEach(["Cash","$ 5.53"], id: \.self) { paymentType in
+                            ForEach(["Cash","$ \(totalPrice)"], id: \.self) { paymentType in
                                             Text(paymentType)
                                         }
                                    }
                                    .pickerStyle(.segmented)
                                    .labelsHidden()
-                                   .frame(maxWidth: 100)
+                                   .frame(maxWidth: 150)
                         Spacer()
                         Image("dots")
                     }

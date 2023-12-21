@@ -17,7 +17,7 @@ struct CardQuantityPicker: View {
     
     func decrementStep(){
         let preferValue = value - 1
-        value = max( preferValue ,0)
+        value = max( preferValue ,1)
     }
     
     var body: some View {

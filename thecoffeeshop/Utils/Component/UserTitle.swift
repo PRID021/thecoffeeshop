@@ -23,7 +23,6 @@ struct UserTitle : View {
                 }
             }
             Spacer()
-            
             Button{
                 nav.path.append(.userProfile)
             }label: {

@@ -18,7 +18,7 @@ struct LinearStepIndicator: View {
                     let modWidth = ((numberSteps - 1) * 20)
                     let indicatorWidth = (geo.size.width - CGFloat(modWidth)) / CGFloat(numberSteps)
                     Spacer()
-                        .frame(width: indicatorWidth, height: 4)
+                        .frame(width: max(0,indicatorWidth), height: 4)
                         .background(initStep >= index ? Color(hex:"#36C07E") : Color(hex:"#DFDFDF"), in: RoundedRectangle(cornerRadius: 20))
                 }
             }

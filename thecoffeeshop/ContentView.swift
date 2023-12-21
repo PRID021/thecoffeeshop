@@ -4,10 +4,8 @@
 //
 //  Created by mac on 11/12/2023.
 //
-
 import SwiftUI
 import MapKit
-
 
 struct ContentView: View {
     @StateObject private var navigationStateState = NavigationStackState()
@@ -15,7 +13,6 @@ struct ContentView: View {
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
-        
         NavigationStack(path: $navigationStateState.path){
             Landing()
                 .navigationDestination(for: Route.self){ route in
@@ -32,8 +29,6 @@ struct ContentView: View {
                     case .userProfile:
                         UserProfileView()
                     }
-                
-                
                 }
         }
         .onChange(of: scenePhase,initial: true){ oldValue,newValue in
@@ -41,9 +36,7 @@ struct ContentView: View {
                 navigationStateState.save()
             }
         }
-     
         .environmentObject(navigationStateState)
-        
     }
 }
 

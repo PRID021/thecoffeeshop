@@ -31,7 +31,6 @@
 		C004160F2B2C4D6E0066554C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160E2B2C4D6E0066554C /* Image.swift */; };
 		C00416112B2C4FAE0066554C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00416102B2C4FAE0066554C /* Common.swift */; };
 		C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028979E2B295662009A6D5F /* DrinkDetail.swift */; };
-		C02897A12B295AED009A6D5F /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A02B295AED009A6D5F /* ModelData.swift */; };
 		C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A22B29B5A5009A6D5F /* DrinkSize.swift */; };
 		C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */; };
 		C0371CF72B3150A0004F5FEB /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */; };
@@ -96,7 +95,6 @@
 		C004160E2B2C4D6E0066554C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		C00416102B2C4FAE0066554C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
 		C028979E2B295662009A6D5F /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
-		C02897A02B295AED009A6D5F /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 		C02897A22B29B5A5009A6D5F /* DrinkSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSize.swift; sourceTree = "<group>"; };
 		C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuantityPicker.swift; sourceTree = "<group>"; };
 		C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
@@ -298,7 +296,6 @@
 			children = (
 				C0CE72A92B282E5500897D53 /* DrinkItem.swift */,
 				C0CE72AF2B284AC700897D53 /* DrinkSection.swift */,
-				C02897A02B295AED009A6D5F /* ModelData.swift */,
 				C02897A22B29B5A5009A6D5F /* DrinkSize.swift */,
 				0436FF8F2B306DEA0034438D /* NavigationStackState.swift */,
 				C0371D042B316E91004F5FEB /* UserViewModel.swift */,
@@ -446,7 +443,6 @@
 				C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */,
 				C0371D022B316B32004F5FEB /* UserProfile.swift in Sources */,
 				0436FF922B3084A00034438D /* Route.swift in Sources */,
-				C02897A12B295AED009A6D5F /* ModelData.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
 				C0371CFB2B3154CF004F5FEB /* APIClient.swift in Sources */,
 				C0371CFF2B316AE5004F5FEB /* UserService.swift in Sources */,
