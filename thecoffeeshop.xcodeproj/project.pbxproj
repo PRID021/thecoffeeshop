@@ -26,7 +26,6 @@
 		04564BB12B27544F00A6D7ED /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BB02B27544F00A6D7ED /* Home.swift */; };
 		04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04564BB22B275AEA00A6D7ED /* HomeTab.swift */; };
 		049E08662B27CEA300842B7D /* UserTitle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 049E08652B27CEA300842B7D /* UserTitle.swift */; };
-		C004160B2B2BFD870066554C /* StepperView in Frameworks */ = {isa = PBXBuildFile; productRef = C004160A2B2BFD870066554C /* StepperView */; };
 		C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160C2B2C32060066554C /* LinearStepIndicator.swift */; };
 		C004160F2B2C4D6E0066554C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160E2B2C4D6E0066554C /* Image.swift */; };
 		C00416112B2C4FAE0066554C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00416102B2C4FAE0066554C /* Common.swift */; };
@@ -40,6 +39,7 @@
 		C0371D022B316B32004F5FEB /* UserProfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371D012B316B32004F5FEB /* UserProfile.swift */; };
 		C0371D052B316E91004F5FEB /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371D042B316E91004F5FEB /* UserViewModel.swift */; };
 		C0371D072B31704E004F5FEB /* UserProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371D062B31704E004F5FEB /* UserProfileView.swift */; };
+		C04085742B35431600C86B85 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C04085732B35431600C86B85 /* .swiftlint.yml */; };
 		C08BFFB52B2FFB6000541A63 /* TrackingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08BFFB42B2FFB6000541A63 /* TrackingMap.swift */; };
 		C0B6AF0B2B2AA4CD00EA918A /* OrderPage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6AF0A2B2AA4CD00EA918A /* OrderPage.swift */; };
 		C0B6AF0D2B2ABE3400EA918A /* CustomDivider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0B6AF0C2B2ABE3400EA918A /* CustomDivider.swift */; };
@@ -104,6 +104,7 @@
 		C0371D012B316B32004F5FEB /* UserProfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfile.swift; sourceTree = "<group>"; };
 		C0371D042B316E91004F5FEB /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		C0371D062B31704E004F5FEB /* UserProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileView.swift; sourceTree = "<group>"; };
+		C04085732B35431600C86B85 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C08BFFB42B2FFB6000541A63 /* TrackingMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingMap.swift; sourceTree = "<group>"; };
 		C0B6AF0A2B2AA4CD00EA918A /* OrderPage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderPage.swift; sourceTree = "<group>"; };
 		C0B6AF0C2B2ABE3400EA918A /* CustomDivider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomDivider.swift; sourceTree = "<group>"; };
@@ -120,7 +121,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C004160B2B2BFD870066554C /* StepperView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -175,6 +175,7 @@
 				0436FF912B3084A00034438D /* Route.swift */,
 				04564B812B27456800A6D7ED /* Assets.xcassets */,
 				04564B832B27456800A6D7ED /* Preview Content */,
+				C04085732B35431600C86B85 /* .swiftlint.yml */,
 			);
 			path = thecoffeeshop;
 			sourceTree = "<group>";
@@ -313,6 +314,7 @@
 				04564B762B27456700A6D7ED /* Sources */,
 				04564B772B27456700A6D7ED /* Frameworks */,
 				04564B782B27456700A6D7ED /* Resources */,
+				C04085722B3542C300C86B85 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -320,7 +322,6 @@
 			);
 			name = thecoffeeshop;
 			packageProductDependencies = (
-				C004160A2B2BFD870066554C /* StepperView */,
 			);
 			productName = thecoffeeshop;
 			productReference = 04564B7A2B27456700A6D7ED /* thecoffeeshop.app */;
@@ -395,7 +396,6 @@
 			);
 			mainGroup = 04564B712B27456700A6D7ED;
 			packageReferences = (
-				C00416092B2BFD870066554C /* XCRemoteSwiftPackageReference "StepperView" */,
 			);
 			productRefGroup = 04564B7B2B27456700A6D7ED /* Products */;
 			projectDirPath = "";
@@ -413,6 +413,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C04085742B35431600C86B85 /* .swiftlint.yml in Resources */,
 				04564B852B27456800A6D7ED /* Preview Assets.xcassets in Resources */,
 				04564B822B27456800A6D7ED /* Assets.xcassets in Resources */,
 			);
@@ -433,6 +434,26 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C04085722B3542C300C86B85 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=\"$PATH:/opt/homebrew/bin\"\n\nif which swiftlint >/dev/null; then\n  swiftlint autocorrect --format\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		04564B762B27456700A6D7ED /* Sources */ = {
@@ -804,25 +825,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		C00416092B2BFD870066554C /* XCRemoteSwiftPackageReference "StepperView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/badrinathvm/StepperView.git";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.6.7;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		C004160A2B2BFD870066554C /* StepperView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = C00416092B2BFD870066554C /* XCRemoteSwiftPackageReference "StepperView" */;
-			productName = StepperView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 04564B722B27456700A6D7ED /* Project object */;
 }
