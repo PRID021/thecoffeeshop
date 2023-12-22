@@ -15,8 +15,9 @@ protocol APIClient {
 
 class URLSessionAPIClient<EndpointType: APIEndpoint>: APIClient {
     func request<T>(_ endpoint: EndpointType) -> AnyPublisher<T, Error> where T: Decodable {
-        debugPrint("==>\(endpoint)")
+      
         let url = endpoint.baseURL.appendingPathComponent(endpoint.path)
+        debugPrint("==>\(url.absoluteString)")
         var request = URLRequest(url: url)
         request.httpMethod = endpoint.method.rawValue
         endpoint.headers?.forEach { header in

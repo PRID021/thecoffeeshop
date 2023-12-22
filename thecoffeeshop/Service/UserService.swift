@@ -1,20 +1,20 @@
+////
+////  UserService.swift
+////  thecoffeeshop
+////
+////  Created by TE-Member on 19/12/2023.
+////
 //
-//  UserService.swift
-//  thecoffeeshop
+//import Foundation
+//import Combine
 //
-//  Created by TE-Member on 19/12/2023.
+//protocol UserServiceProtocol {
+//    func getUserProfile() -> AnyPublisher<UserProfile, Error>
+//}
 //
-
-import Foundation
-import Combine
-
-protocol UserServiceProtocol {
-    func getUserProfile() -> AnyPublisher<UserProfile, Error>
-}
-
-class UserService: UserServiceProtocol {
-    let apiClient = URLSessionAPIClient<UserEndpoint>()
-    func getUserProfile() -> AnyPublisher<UserProfile, Error> {
-        return apiClient.request(.profile)
-    }
-}
+//class UserService: UserServiceProtocol {
+//    let apiClient = URLSessionAPIClient<UserEndpoint>()
+//    func getUserProfile() -> AnyPublisher<UserProfile, Error> {
+//        return apiClient.request(.profile)
+//    }
+//}
