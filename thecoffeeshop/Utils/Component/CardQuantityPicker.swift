@@ -10,24 +10,21 @@ import SwiftUI
 struct CardQuantityPicker: View {
     var drinkItem: DrinkItem
     @Binding  var value: Int
-    
-    func incrementStep(){
-        value+=1
+    func incrementStep() {
+        value += 1
     }
-    
-    func decrementStep(){
+    func decrementStep() {
         let preferValue = value - 1
-        value = max( preferValue ,1)
+        value = max(preferValue, 1)
     }
-    
     var body: some View {
-        HStack{
+        HStack {
             Image(drinkItem.image)
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(maxWidth: 64, maxHeight: 64)
                 .clipShape(RoundedRectangle(cornerRadius: 16))
-            VStack (alignment: .leading){
+            VStack(alignment: .leading) {
                 Text(drinkItem.categorie)
                     .font(.title3)
                 Text("with \(drinkItem.toping)")
@@ -36,7 +33,6 @@ struct CardQuantityPicker: View {
             }
             Spacer()
             HStack {
-          
                 Button {
                     decrementStep()
                 }label: {
@@ -48,9 +44,9 @@ struct CardQuantityPicker: View {
                         .background(Circle().stroke(Color.onBackground, lineWidth: 1))
                         .foregroundColor(Color.appPrimary)
                 }
-                Text("\(value)").padding(.horizontal,8)
+                Text("\(value)").padding(.horizontal, 8)
                     .frame(maxWidth: 40)
-                Button{
+                Button {
                     incrementStep()
                 }label: {
                     Image(systemName: "plus")
@@ -71,7 +67,7 @@ struct CardQuantityPicker: View {
 #Preview {
     let drinkItem = drinkSections[0].drinks[0]
     @State var quantity: Int = 0
-    return CardQuantityPicker(drinkItem: drinkItem,value: $quantity)
+    return CardQuantityPicker(drinkItem: drinkItem, value: $quantity)
         .padding(32)
         .frame(width: .infinity, height: .infinity )
         .background(Color.canvas)

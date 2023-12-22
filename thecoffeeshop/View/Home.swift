@@ -10,7 +10,7 @@ import SwiftUI
 struct Home: View {
     @Namespace var animation
     @StateObject var tabBarViewModel = TabBarViewModel()
-    init(){
+    init() {
         let transparentAppearence = UITabBarAppearance()
         transparentAppearence.configureWithTransparentBackground()
         UITabBar.appearance().standardAppearance = transparentAppearence
@@ -18,11 +18,10 @@ struct Home: View {
         UISegmentedControl.appearance().selectedSegmentTintColor = UIColor(Color.appPrimary)
         UISegmentedControl.appearance().backgroundColor = UIColor(Color(hex: "#F2F2F2"))
         UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.white], for: .selected)
-           UISegmentedControl.appearance().setTitleTextAttributes([.foregroundColor: UIColor.black], for: .normal)
+        UISegmentedControl.appearance().setTitleTextAttributes(      [.foregroundColor: UIColor.black], for: .normal)
     }
-    
     var body: some View {
-        TabView(selection: $tabBarViewModel.currentTab){
+        TabView(selection: $tabBarViewModel.currentTab) {
             HomeTab( animation: animation)
                 .tag(Tab.home)
                 .toolbar(.hidden, for: .tabBar)
@@ -34,69 +33,66 @@ struct Home: View {
                 .tag(Tab.payment)
         }
 
-        .overlay(alignment: .bottom){
-            HStack{
-                TabBarButton(tab: .home , image: "cup.and.saucer", animation: animation)
-                TabBarButton(tab: .favorite , image: "heart", animation: animation)
-                TabBarButton(tab: .news , image:  "party.popper", animation: animation)
-                TabBarButton(tab: .payment , image: "creditcard", animation: animation)
+        .overlay(alignment: .bottom) {
+            HStack {
+                TabBarButton(tab: .home, image: "cup.and.saucer", animation: animation)
+                TabBarButton(tab: .favorite, image: "heart", animation: animation)
+                TabBarButton(tab: .news, image: "party.popper", animation: animation)
+                TabBarButton(tab: .payment, image: "creditcard", animation: animation)
             }
             .background(Color.bgEnd)
         }
         .environmentObject(tabBarViewModel)
         .navigationBarBackButtonHidden(true)
-
-  
     }
 }
-
-
 
 enum Tab: String, CaseIterable {
     case home = "Menu"
     case favorite = "Like"
     case news = "Voucher"
     case payment = "Payment"
-    
 }
 
 class TabBarViewModel: ObservableObject {
     @Published var currentTab: Tab = .home
-    @Published var showDetail:Bool = false
+    @Published var showDetail: Bool = false
 }
 
-struct TabBarButton : View {
+struct TabBarButton: View {
     var tab: Tab
     var image: String
     var animation: Namespace.ID
-    
     @EnvironmentObject var tabBarViewModel: TabBarViewModel
-    
     var body: some View {
-        Button{
-            withAnimation{
+        Button {
+            withAnimation {
                 tabBarViewModel.currentTab = tab
             }
         }label: {
-            VStack{
-                Image(systemName: tabBarViewModel.currentTab == tab ? image+".fill" : image)
+            VStack {
+                Image(systemName: tabBarViewModel.currentTab == tab ? image + ".fill" : image)
                     .font(.title2)
                     .frame(height: 16)
-                    .padding(.top,8)
+                    .padding(.top, 8)
                 Text(tab.rawValue)
                     .font(.caption.bold())
             }
             .foregroundColor(tabBarViewModel.currentTab == tab ?
                 .appPrimary : .gray)
             .frame(maxWidth: .infinity)
-            .overlay{
+            .overlay {
                 ZStack {
                     if tabBarViewModel.currentTab == tab {
                         TabBarIndicator()
                             .fill(
-                                .linearGradient(.init(
-                                    colors: [.appPrimary.opacity(0.5), .appPrimary.opacity(0.1),.clear]
-                                ), startPoint: .top, endPoint: .bottom)
+                                .linearGradient(
+                                    .init(
+                                    colors: [.appPrimary.opacity(0.5), .appPrimary.opacity(0.1), .clear]
+                                ),
+                                    startPoint: .top,
+                                    endPoint: .bottom
+                                )
                             )
                             .padding(.horizontal, 8)
                             .matchedGeometryEffect(id: "TAB", in: animation)
@@ -115,10 +111,9 @@ struct TabBarIndicator: Shape {
             path.addLine(to: CGPoint(x: rect.width, y: 0))
             path.addLine(to: CGPoint(x: rect.width - 10, y: rect.height))
             path.addLine(to: CGPoint(x: 10, y: rect.height))
-        };
+        }
     }
 }
-
 
 #Preview {
     ContentView()

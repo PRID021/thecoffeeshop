@@ -11,17 +11,14 @@ import Combine
 class UserViewModel: ObservableObject {
     private var canvellables = Set<AnyCancellable>()
     let userService: UserServiceProtocol
-    
     @Published var userProfile: UserProfile?
-    
-    init(userService: UserServiceProtocol){
+    init(userService: UserServiceProtocol) {
         self.userService = userService
     }
-    
-    func fetchUserProfile(){
+    func fetchUserProfile() {
         userService.getUserProfile()
             .receive(on: RunLoop.main)
-            .sink(receiveCompletion: {data in
+            .sink(receiveCompletion: { _ in
             }, receiveValue: { [weak self] data in
                 self?.userProfile = data
             })

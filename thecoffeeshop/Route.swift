@@ -9,10 +9,9 @@ import Foundation
 import MapKit
 
 enum Route {
-  
     case home
     case drinkDetail(DrinkItem)
-    case order(DrinkItem,DrinkSize)
+    case order(DrinkItem, DrinkSize)
     case orderTracking(MKMapItem)
     case userProfile
 }
@@ -35,4 +34,3 @@ extension Route: Hashable {
 
     }
 }
-

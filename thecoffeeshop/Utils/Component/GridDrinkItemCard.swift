@@ -13,13 +13,12 @@ struct GridDrinkItemCard: View {
         GridItem(.adaptive(minimum: 150, maximum: 200)),
         GridItem(.adaptive(minimum: 150, maximum: 200))
     ]
-    
     var body: some View {
-            LazyVGrid(columns: layout, spacing: 8) {
-                ForEach(drinks){ drink in
-                    DinkCard(drinkItem: drink)
-                }
+        LazyVGrid(columns: layout, spacing: 8) {
+            ForEach(drinks) { drink in
+                DinkCard(drinkItem: drink)
             }
+        }
     }
 }
 

@@ -10,17 +10,17 @@ import SwiftUI
 struct ElevatedButton: View {
     var cornerRadius: CGFloat = 25.0
     let title: String
-    let onPress: () ->()
+    let onPress: () -> Void
     var body: some View {
-        Button(action: onPress){
+        Button(action: onPress) {
             Text(title)
-                .frame(minWidth:0, maxWidth: .infinity)
+                .frame(minWidth: 0, maxWidth: .infinity)
                 .font(.system(size: 18))
                 .padding(.vertical, 16)
                 .foregroundColor(.onPrimary)
-                .overlay{
+                .overlay {
                     RoundedRectangle(cornerRadius: cornerRadius)
-                        .stroke(Color.onPrimary,lineWidth: 1)
+                        .stroke(Color.onPrimary, lineWidth: 1)
                 }
         }
         .background(Color.appPrimary)

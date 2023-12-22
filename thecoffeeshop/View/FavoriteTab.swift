@@ -8,14 +8,11 @@
 import SwiftUI
 import Foundation
 
-
 struct FavoriteTab: View {
-
     var body: some View {
         Text("Favorite")
     }
 }
-
 
 #Preview {
     ContentView()

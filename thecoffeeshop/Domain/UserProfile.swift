@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct UserProfile : Decodable {
+struct UserProfile: Decodable {
     var username: String
 }

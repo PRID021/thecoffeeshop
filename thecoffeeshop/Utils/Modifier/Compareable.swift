@@ -8,7 +8,7 @@
 import Foundation
 
 extension Comparable {
-    func clamped(from lowerBound: Self , to upperBound: Self) -> Self {
+    func clamped(from lowerBound: Self, to upperBound: Self) -> Self {
         return min(max(self, lowerBound), upperBound)
     }
 }

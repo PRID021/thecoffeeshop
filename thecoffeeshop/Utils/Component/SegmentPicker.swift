@@ -9,21 +9,20 @@ import SwiftUI
 
 struct SegmentPicker: View {
     @Namespace var animation
-    @State var selected:  String = "Deliver"
+    @State var selected: String = "Deliver"
     var body: some View {
-        HStack{
-            if(selected == "Deliver"){
+        HStack {
+            if selected == "Deliver" {
                 Text("Deliver")
-                    .frame(maxWidth: .infinity,alignment: .center)
+                    .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(.white)
-                    .padding(.vertical,10)
+                    .padding(.vertical, 10)
                     .background(Color.appPrimary)
                     .matchedGeometryEffect(id: "Segment", in: animation)
-            }
-            else{
+            } else {
                 Text("Deliver")
-                    .frame(maxWidth: .infinity,alignment: .center)
-                    .padding(.vertical,10)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.vertical, 10)
                     .background(Color(hex: "#F2F2F2").opacity(0.01))
                     .onTapGesture {
                         withAnimation {
@@ -31,30 +30,27 @@ struct SegmentPicker: View {
                         }
                     }
             }
-        
-            if(selected == "Pick up"){
+            if selected == "Pick up" {
                 Text("Pick up")
-                    .frame(maxWidth: .infinity,alignment: .center)
+                    .frame(maxWidth: .infinity, alignment: .center)
                     .foregroundColor(.white)
-                    .padding(.vertical,10)
+                    .padding(.vertical, 10)
                     .background(Color.appPrimary)
                     .matchedGeometryEffect(id: "Segment", in: animation)
-            }
-            else{
+            } else {
                 Text("Pick up")
-                    .frame(maxWidth: .infinity,alignment: .center)
-                    .padding(.vertical,10)
+                    .frame(maxWidth: .infinity, alignment: .center)
+                    .padding(.vertical, 10)
                     .background(Color(hex: "#F2F2F2").opacity(0.01))
                     .onTapGesture {
                         withAnimation {
                             selected = "Pick up"
                         }
-                     
                     }
             }
         }
         .padding(2)
-        .background(Color(hex: "#F2F2F2"),in: RoundedRectangle(cornerRadius: 14))
+        .background(Color(hex: "#F2F2F2"), in: RoundedRectangle(cornerRadius: 14))
     }
 }
 

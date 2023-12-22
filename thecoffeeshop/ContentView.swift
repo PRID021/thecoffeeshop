@@ -9,20 +9,19 @@ import MapKit
 
 struct ContentView: View {
     @StateObject private var navigationStateState = NavigationStackState()
-    @State var orderLocation = MKMapItem(placemark:  MKPlacemark(coordinate: .orderLocation));
+    @State var orderLocation = MKMapItem(
+        placemark: MKPlacemark(coordinate: .orderLocation))
     @Environment(\.scenePhase) private var scenePhase
-    
     var body: some View {
-        NavigationStack(path: $navigationStateState.path){
+        NavigationStack(path: $navigationStateState.path) {
             Landing()
-                .navigationDestination(for: Route.self){ route in
+                .navigationDestination(for: Route.self) { route in
                     switch route {
                     case .home:
                         Home()
                     case .drinkDetail(let drinkDetail):
                         DrinkDetail(drinkDetail: drinkDetail)
-               
-                    case .order(let drinkItem,let drinkSize):
+                    case .order(let drinkItem, let drinkSize):
                         OrderPage(drinkDetail: drinkItem, drinkSize: drinkSize)
                     case .orderTracking:
                         TrackingMap(orderLocation: $orderLocation)
@@ -31,8 +30,8 @@ struct ContentView: View {
                     }
                 }
         }
-        .onChange(of: scenePhase,initial: true){ oldValue,newValue in
-            if(newValue == .background){
+        .onChange(of: scenePhase, initial: true) { _, newValue in
+            if newValue == .background {
                 navigationStateState.save()
             }
         }

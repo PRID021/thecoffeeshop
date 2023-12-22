@@ -11,8 +11,7 @@ enum DrinkSize: String, CaseIterable, Identifiable {
     var id: String {
         self.rawValue
     }
-    case s = "S"
-    case m = "M"
-    case l = "L"
+    case siS = "S"
+    case siM = "M"
+    case siL = "L"
 }
-

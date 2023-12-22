@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 extension View {
     func borderBackgroundWithRadient() -> some View {
         modifier(BorderBackGroundGradient())
@@ -17,7 +16,8 @@ extension View {
 struct BorderBackGroundGradient: ViewModifier {
     func body(content: Content) -> some View {
         content
-            .background(LinearGradient(colors: [.bgStart, .bgEnd], startPoint: .bottomLeading, endPoint: .topTrailing), in: .rect(
+            .background(LinearGradient(colors: [.bgStart, .bgEnd], startPoint: .bottomLeading, endPoint: .topTrailing),
+                in: .rect(
                 topLeadingRadius: 24,
                 bottomLeadingRadius: 0,
                 bottomTrailingRadius: 0,
@@ -26,4 +26,3 @@ struct BorderBackGroundGradient: ViewModifier {
             ))
     }
 }
-

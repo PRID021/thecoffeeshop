@@ -7,29 +7,22 @@
 
 import SwiftUI
 
-
 class NavigationStackState: ObservableObject {
     @Published var path: [Route]
-    
     static func readSerializeData() -> Data? {
         nil
     }
-    
-    static func writeSerializeData(_ data: Data){
-        
+    static func writeSerializeData(_ data: Data) {
     }
-    init(){
+    init() {
         self.path = []
     }
-    func save(){
-
+    func save() {
     }
-    
-    func popTopRoot(){
+    func popTopRoot() {
         path = []
-        
     }
-    func popToHome(){
+    func popToHome() {
         path = [.home]
     }
 }

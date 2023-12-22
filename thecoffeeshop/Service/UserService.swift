@@ -8,16 +8,13 @@
 import Foundation
 import Combine
 
-protocol UserServiceProtocol{
-    func getUserProfile() -> AnyPublisher<UserProfile,Error>
+protocol UserServiceProtocol {
+    func getUserProfile() -> AnyPublisher<UserProfile, Error>
 }
 
 class UserService: UserServiceProtocol {
     let apiClient = URLSessionAPIClient<UserEndpoint>()
     func getUserProfile() -> AnyPublisher<UserProfile, Error> {
-       
         return apiClient.request(.profile)
     }
-    
-    
 }
