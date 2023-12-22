@@ -84,7 +84,12 @@ var btnBack: some View {
                 .font(.system(size: 18))
                 .foregroundColor(Color.appPrimary)
                 .fontWeight(.semibold)
-            Text("A cappuccino is an approximately 150 ml (5 oz) beverage,with 25 ml of espresso coffee and 85ml of fresh milk the fo... \(inline)")
+            let message =
+            """
+            A cappuccino is an approximately 150 ml (5 oz) beverage, \
+            with 25 ml of espresso coffee and 85ml of fresh milk the fo...
+            """
+            Text("\(message) \(inline)")
                 .lineLimit(3)
                 .font(.system(size: 16))
                 .fontWeight(.regular)
