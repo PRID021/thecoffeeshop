@@ -26,7 +26,7 @@ struct ContentView: View {
                     case .orderTracking:
                         TrackingMap(orderLocation: $orderLocation)
                     case .userProfile:
-                        CoffeeView()
+                        Text("Un Implement")
                     }
                 }
         }

@@ -17,6 +17,8 @@ struct GridDrinkItemCard: View {
         LazyVGrid(columns: layout, spacing: 8) {
             ForEach(drinks) { drink in
                 DinkCard(drinkItem: drink)
+                    .frame(height: 260)
+                    .padding(.bottom, 4)
             }
         }
     }

@@ -27,12 +27,15 @@ var btnBack: some View {
         VStack(alignment: .leading, spacing: 0) {
             HStack {
                 Spacer()
-                Image(drinkDetail.image)
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: 250, height: 250, alignment: .center)
-                    .clipped()
-                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                AsyncImage(url: URL(string: drinkDetail.image)) { image in
+                    image.resizable()
+                        .scaledToFill()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: 250, height: 250, alignment: .center)
+                .clipped()
+                .clipShape(RoundedRectangle(cornerRadius: 16))
                 Spacer()
             }.padding(.bottom, 20)
             Text(drinkDetail.categorie)

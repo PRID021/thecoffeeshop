@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import CachedAsyncImage
 
 struct AdaptiveLabelStyle: LabelStyle {
     var iconColor: Color = .yellow
@@ -23,39 +24,43 @@ struct DinkCard: View {
     @EnvironmentObject var nav: NavigationStackState
     var body: some View {
         VStack(alignment: .center) {
-            Image(drinkItem.image)
-                .resizable()
-                .scaledToFill()
-                .frame(width: 141, height: 132, alignment: .center)
-                .clipped()
-                .cornerRadius(16)
-                .padding(.horizontal, 4)
-                .padding(.top, 4)
-                .padding(.bottom, 12)
-                .overlay(alignment: .topLeading) {
-            Label("\(String(format: "%.2f", drinkItem.starRate))", systemImage: "star.fill")
-                .labelStyle(AdaptiveLabelStyle())
-                .font(.system(size: 16))
-                .padding(.vertical, 4)
-                .padding(.horizontal, 8)
-                .background(.ultraThinMaterial)
-                .clipShape(
-                    .rect(
-                        topLeadingRadius: 16,
-                        bottomLeadingRadius: 0,
-                        bottomTrailingRadius: 18,
-                        topTrailingRadius: 0
-                    )
-                )
-                .padding(.top, 4)
-                .padding(.leading, 4)
-                }
+            CachedAsyncImage(url: URL(string: drinkItem.image)) { image in
+                image.resizable()
+                    .scaledToFill()
+                    .frame(width: 141, height: 132, alignment: .center)
+                    .clipped()
+                    .cornerRadius(16)
+                    .padding(.horizontal, 4)
+                    .padding(.top, 4)
+                    .padding(.bottom, 12)
+                    .overlay(alignment: .topLeading) {
+                        Label("\(String(format: "%.2f", drinkItem.starRate))", systemImage: "star.fill")
+                            .labelStyle(AdaptiveLabelStyle())
+                            .font(.system(size: 16))
+                            .padding(.vertical, 4)
+                            .padding(.horizontal, 8)
+                            .background(.ultraThinMaterial)
+                            .clipShape(
+                                .rect(
+                                    topLeadingRadius: 16,
+                                    bottomLeadingRadius: 0,
+                                    bottomTrailingRadius: 18,
+                                    topTrailingRadius: 0
+                                )
+                            )
+                            .padding(.top, 4)
+                            .padding(.leading, 4)
+                    }
+            } placeholder: {
+                ProgressView()
+                    .frame(width: 145, height: 148, alignment: .center)
+            }
                 VStack(alignment: .leading, spacing: 0) {
                     Text(drinkItem.categorie)
                         .font(.system(size: 16))
                         .fontWeight(.semibold)
                         .foregroundColor(Color.black)
-                    Text("with \(drinkItem.toping)")
+                    Text("\(drinkItem.toping)")
                         .font(.system(size: 12))
                         .fontWeight(.regular)
                         .foregroundColor(.onBackground)
@@ -87,9 +92,22 @@ struct DinkCard: View {
 }
 
 #Preview {
-let drinkItem = DrinkItem(starRate: 4.8, image: "cappucino", categorie: "Cappucino", toping: "Chocolate", price: 4.53)
+let path1 = "https://upload.wikimedia.org/wikipedia/commons/d/d8/"
+let path2 = "Blue_Bottle%2C_Kyoto_Style_Ice_Coffee_%285909775445%29.jpg"
+let drinkItem = DrinkItem(
+    id: UUID().uuidString,
+    starRate: 4.3,
+    image: "\(path1)\(path2)",
+    categorie: "Hot",
+    toping: "Coffee, with Sugar",
+    price: 5.0)
     return DinkCard(drinkItem: drinkItem)
-        .frame(maxWidth: 150, maxHeight: 250)
-        .padding()
-        .background(Color.black)
+    .frame(width: 150, height: 250)
+    .padding()
+    .background(Color.black)
+}
+
+// URLCache+imageCache.swift
+extension URLCache {
+    static let imageCache = URLCache(memoryCapacity: 512_000_000, diskCapacity: 10_000_000_000)
 }

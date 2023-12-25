@@ -13,7 +13,7 @@ protocol CoffeeServiceProtocal {
     func getIcedDrink() -> AnyPublisher<[DrinkCoffee], Error>
 }
 
-class CoffeeService : CoffeeServiceProtocal {
+class CoffeeService: CoffeeServiceProtocal {
     func getHotDrink() -> AnyPublisher<[DrinkCoffee], Error> {
         apiClient.request(.hot)
     }

@@ -64,11 +64,12 @@ struct CardQuantityPicker: View {
     }
 }
 
-#Preview {
-    let drinkItem = drinkSections[0].drinks[0]
-    @State var quantity: Int = 0
-    return CardQuantityPicker(drinkItem: drinkItem, value: $quantity)
-        .padding(32)
-        .frame(width: .infinity, height: .infinity )
-        .background(Color.canvas)
-}
+//#Preview {
+//  
+//    let viewModel = CoffeeViewModel(coffeeService: CoffeeService())
+//    @State var quantity: Int = 0
+//    return CardQuantityPicker(drinkItem: drinkItem, value: $quantity)
+//        .padding(32)
+//        .frame(width: .infinity, height: .infinity )
+//        .background(Color.canvas)
+//}

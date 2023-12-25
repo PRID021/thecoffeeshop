@@ -8,16 +8,16 @@ import Foundation
 import SwiftUI
 
 struct HomeTab: View {
-    @State var searchInput: String = ""
-    @State var selectedDrinkSection = drinkSections[0]
+//    @State var searchInput: String = ""
+    @StateObject var viewModel: CoffeeViewModel = CoffeeViewModel(coffeeService: CoffeeService())
     @State var shouldExpand = false
     var animation: Namespace.ID
     var body: some View {
         GeometryReader { geo in
             ResizeableVStack(
                 geo: geo,
-                seletedSectionDrink: $selectedDrinkSection,
-                sections: drinkSections
+                seletedSectionDrink: $viewModel.selectedDrinkSection,
+                sections: viewModel.drinkSections
             ) { offset in
                 VStack(alignment: .leading, spacing: 0) {
                     VStack(spacing: 0) {
@@ -33,8 +33,8 @@ struct HomeTab: View {
                                 .padding(.vertical, 12)
                                 .padding(.leading, 8)
                                 .frame(width: 44, height: 44)
-                            TextField("", text: $searchInput)
-                                .placeholder(when: searchInput.isEmpty) {
+                            TextField("", text: $viewModel.filter)
+                                .placeholder(when: viewModel.filter.isEmpty) {
                                     Text("Search Coffee")
                                         .foregroundColor(Color.onBackground)
                                 }
@@ -60,26 +60,26 @@ struct HomeTab: View {
                     ScrollViewReader { scrollView in
                         ScrollView(.horizontal) {
                             LazyHStack(spacing: 8) {
-                                ForEach(drinkSections, id: \.self) { drinkSection in
+                                ForEach(viewModel.drinkSections, id: \.self) { drinkSection in
                                     Button {
                                         withAnimation {
-                                            selectedDrinkSection = drinkSection
-                                            scrollView.scrollTo(selectedDrinkSection)
+                                            viewModel.selectedDrinkSection = drinkSection
+                                            scrollView.scrollTo(viewModel.selectedDrinkSection)
                                         }
                                     }label: {
                                         Label(drinkSection.collection, systemImage: "")
                                             .labelStyle(.titleOnly)
                                             .font(.system(size: 16))
-                                            .fontWeight(selectedDrinkSection == drinkSection ? .bold : .medium)
+                                            .fontWeight(viewModel.selectedDrinkSection == drinkSection ? .bold : .medium)
                                             .padding(.vertical, 10)
                                             .padding(.horizontal, 16)
-                                            .foregroundColor(selectedDrinkSection == drinkSection ? .white : .black)
+                                            .foregroundColor(viewModel.selectedDrinkSection == drinkSection ? .white : .black)
                                             .background {
                                                 ZStack {
                                                     RoundedRectangle(cornerRadius: 12)
                                                         .fill()
                                                         .foregroundColor(.white)
-                                                    if selectedDrinkSection == drinkSection {
+                                                    if viewModel.selectedDrinkSection == drinkSection {
                                                         RoundedRectangle(cornerRadius: 12)
                                                             .fill()
                                                             .foregroundColor(.appPrimary)
@@ -99,10 +99,13 @@ struct HomeTab: View {
                     }
                 }
             }
-        contentScrollable: { selectedSectionDrink in
-            GridDrinkItemCard(drinks: selectedSectionDrink.drinks)
+        contentScrollable: { _ in
+            GridDrinkItemCard(drinks: viewModel.drinkItems ?? [])
         }
         .background(Color.canvas)
+        .onAppear {
+            viewModel.fetchHotCoffee()
+        }
         }
     }
 }

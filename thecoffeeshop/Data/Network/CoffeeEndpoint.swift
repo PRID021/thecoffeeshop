@@ -7,7 +7,6 @@
 
 import Foundation
 
-
 var scheme: String = "https"
 var domain: String = "api.sampleapis.com"
 var basePath: String = "coffee"
@@ -33,16 +32,12 @@ enum CoffeeEndpoint: APIEndpoint {
             return .get
         }
     }
-    
-    var headers: [String : String]? {
+    var headers: [String: String]? {
         return nil
     }
-    
-    var paramester: [String : Any]? {
+    var paramester: [String: Any]? {
         return nil
     }
-    
     case hot
     case iced
-    
 }
