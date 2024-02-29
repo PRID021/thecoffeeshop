@@ -9,6 +9,8 @@ import Foundation
 import MapKit
 
 enum Route {
+    case landing
+    case login
     case home
     case drinkDetail(DrinkItem)
     case order(DrinkItem, DrinkSize)
@@ -19,6 +21,10 @@ enum Route {
 extension Route: Hashable {
     func  hash(into hasher: inout Hasher) {
         switch self {
+        case .landing:
+            hasher.combine("landing")
+        case .login:
+            hasher.combine("login")
         case .home:
             hasher.combine("home")
         case .drinkDetail(let drinkItem):

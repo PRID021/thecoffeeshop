@@ -8,6 +8,7 @@
 import SwiftUI
 
 class NavigationStackState: ObservableObject {
+    @Published var showAlert: Bool = false
     @Published var path: [Route]
     static func readSerializeData() -> Data? {
         nil

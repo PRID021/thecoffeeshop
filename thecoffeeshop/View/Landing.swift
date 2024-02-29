@@ -24,7 +24,8 @@ struct Landing: View {
                 .padding(.horizontal, 48)
 
             ElevatedButton(title: "Get Started", onPress: {
-                nav.path.append(.home)
+                nav.path.removeAll()
+                nav.path.append(.login)
                 print("nav : \(nav.path.count)")
             })
             .padding()
