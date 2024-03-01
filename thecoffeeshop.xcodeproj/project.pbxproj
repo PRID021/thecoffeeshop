@@ -26,8 +26,11 @@
 		C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160C2B2C32060066554C /* LinearStepIndicator.swift */; };
 		C004160F2B2C4D6E0066554C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160E2B2C4D6E0066554C /* Image.swift */; };
 		C00416112B2C4FAE0066554C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00416102B2C4FAE0066554C /* Common.swift */; };
-		C01B4ABB2B9195A8002D351D /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4ABA2B9195A8002D351D /* Root.swift */; };
-		C01B4ABD2B9195B2002D351D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4ABC2B9195B2002D351D /* Login.swift */; };
+		C01B4ABF2B9196A4002D351D /* UserPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4ABE2B9196A4002D351D /* UserPreferenceKeys.swift */; };
+		C01B4AC32B91A2A3002D351D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4AC22B91A2A3002D351D /* Login.swift */; };
+		C01B4AC52B91A371002D351D /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4AC42B91A371002D351D /* Root.swift */; };
+		C01B4AC72B91A51E002D351D /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4AC62B91A51E002D351D /* CustomTextField.swift */; };
+		C01B4AC92B91A650002D351D /* SecurePasswordTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4AC82B91A650002D351D /* SecurePasswordTextField.swift */; };
 		C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028979E2B295662009A6D5F /* DrinkDetail.swift */; };
 		C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A22B29B5A5009A6D5F /* DrinkSize.swift */; };
 		C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */; };
@@ -71,8 +74,11 @@
 		C004160C2B2C32060066554C /* LinearStepIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearStepIndicator.swift; sourceTree = "<group>"; };
 		C004160E2B2C4D6E0066554C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		C00416102B2C4FAE0066554C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
-		C01B4ABA2B9195A8002D351D /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
-		C01B4ABC2B9195B2002D351D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		C01B4ABE2B9196A4002D351D /* UserPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceKeys.swift; sourceTree = "<group>"; };
+		C01B4AC22B91A2A3002D351D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		C01B4AC42B91A371002D351D /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
+		C01B4AC62B91A51E002D351D /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		C01B4AC82B91A650002D351D /* SecurePasswordTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurePasswordTextField.swift; sourceTree = "<group>"; };
 		C028979E2B295662009A6D5F /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
 		C02897A22B29B5A5009A6D5F /* DrinkSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSize.swift; sourceTree = "<group>"; };
 		C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuantityPicker.swift; sourceTree = "<group>"; };
@@ -159,8 +165,8 @@
 				04045DD12B28A21200502577 /* FavoriteTab.swift */,
 				C028979E2B295662009A6D5F /* DrinkDetail.swift */,
 				C0B6AF0A2B2AA4CD00EA918A /* OrderPage.swift */,
-				C01B4ABA2B9195A8002D351D /* Root.swift */,
-				C01B4ABC2B9195B2002D351D /* Login.swift */,
+				C01B4AC22B91A2A3002D351D /* Login.swift */,
+				C01B4AC42B91A371002D351D /* Root.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -190,6 +196,8 @@
 				C0B6AF0C2B2ABE3400EA918A /* CustomDivider.swift */,
 				C0B6AF0E2B2AF35900EA918A /* SegmentPicker.swift */,
 				C004160C2B2C32060066554C /* LinearStepIndicator.swift */,
+				C01B4AC62B91A51E002D351D /* CustomTextField.swift */,
+				C01B4AC82B91A650002D351D /* SecurePasswordTextField.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -207,7 +215,6 @@
 		C0371CFC2B315A56004F5FEB /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				C08E9B552B3584E90026862A /* Local */,
 				C0371CF52B315065004F5FEB /* Network */,
 			);
 			path = Data;
@@ -234,15 +241,9 @@
 			children = (
 				04564BAD2B274EC700A6D7ED /* Component */,
 				04564BAA2B27494800A6D7ED /* Modifier */,
+				C01B4ABE2B9196A4002D351D /* UserPreferenceKeys.swift */,
 			);
 			path = Utils;
-			sourceTree = "<group>";
-		};
-		C08E9B552B3584E90026862A /* Local */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Local;
 			sourceTree = "<group>";
 		};
 		C0CE72A82B282E1400897D53 /* ViewModel */ = {
@@ -360,9 +361,9 @@
 				04564B802B27456700A6D7ED /* ContentView.swift in Sources */,
 				C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */,
 				0436FF922B3084A00034438D /* Route.swift in Sources */,
+				C01B4AC92B91A650002D351D /* SecurePasswordTextField.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
 				C0371CFB2B3154CF004F5FEB /* APIClient.swift in Sources */,
-				C01B4ABB2B9195A8002D351D /* Root.swift in Sources */,
 				C0CE72AE2B283FA800897D53 /* GridDrinkItemCard.swift in Sources */,
 				C0B6AF0B2B2AA4CD00EA918A /* OrderPage.swift in Sources */,
 				C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */,
@@ -371,17 +372,20 @@
 				C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */,
 				C08BFFB52B2FFB6000541A63 /* TrackingMap.swift in Sources */,
 				C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */,
+				C01B4AC32B91A2A3002D351D /* Login.swift in Sources */,
 				C08E9B572B3585390026862A /* CoffeeEndpoint.swift in Sources */,
 				C00416112B2C4FAE0066554C /* Common.swift in Sources */,
 				C08E9B542B35845C0026862A /* DrinkCoffee.swift in Sources */,
 				C0371CF72B3150A0004F5FEB /* APIEndpoint.swift in Sources */,
 				C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */,
+				C01B4ABF2B9196A4002D351D /* UserPreferenceKeys.swift in Sources */,
 				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,
+				C01B4AC52B91A371002D351D /* Root.swift in Sources */,
 				04045DD62B28AE8400502577 /* Compareable.swift in Sources */,
 				C0CE72AC2B2830CC00897D53 /* DinkCard.swift in Sources */,
 				C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */,
-				C01B4ABD2B9195B2002D351D /* Login.swift in Sources */,
 				04045DD22B28A21200502577 /* FavoriteTab.swift in Sources */,
+				C01B4AC72B91A51E002D351D /* CustomTextField.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				0436FF902B306DEA0034438D /* NavigationStackState.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,
