@@ -36,9 +36,12 @@ struct ContentView: View {
                 .onAppear {
                     let isFirstLaunch = UserDefaults.standard.value(forKey: UserPreferenceKeys.firstLaunch)
                     if isFirstLaunch != nil {
-                        navigationStateState.path.append(.login) } else {
+                        navigationStateState.path.append(.login) } 
+                    else {
                         UserDefaults.standard.set(true, forKey: UserPreferenceKeys.firstLaunch)
-                        navigationStateState.path.append(.landing) }
+                        navigationStateState.path.append(.landing)
+                    }
+                    navigationStateState.path.append(.landing)
                 }
         }
         .onChange(of: scenePhase, initial: true) { _, newValue in

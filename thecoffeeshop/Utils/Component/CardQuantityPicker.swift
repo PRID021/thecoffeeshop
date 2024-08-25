@@ -63,13 +63,3 @@ struct CardQuantityPicker: View {
 
     }
 }
-
-//#Preview {
-//  
-//    let viewModel = CoffeeViewModel(coffeeService: CoffeeService())
-//    @State var quantity: Int = 0
-//    return CardQuantityPicker(drinkItem: drinkItem, value: $quantity)
-//        .padding(32)
-//        .frame(width: .infinity, height: .infinity )
-//        .background(Color.canvas)
-//}

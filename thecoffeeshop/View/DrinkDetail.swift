@@ -24,129 +24,123 @@ var btnBack: some View {
     }
 }
     var body: some View {
-        VStack(alignment: .leading, spacing: 0) {
-            HStack {
-                Spacer()
-                AsyncImage(url: URL(string: drinkDetail.image)) { image in
-                    image.resizable()
-                        .scaledToFill()
-                } placeholder: {
-                    ProgressView()
-                }
-                .frame(width: 250, height: 250, alignment: .center)
-                .clipped()
-                .clipShape(RoundedRectangle(cornerRadius: 16))
-                Spacer()
-            }.padding(.bottom, 20)
-            Text(drinkDetail.categorie)
-                .font(.system(size: 20))
-                .fontWeight(.semibold)
-                .foregroundColor(.black)
-                .padding(.bottom, 4)
-            Text("with \(drinkDetail.toping)")
-                .font(.system(size: 12))
-                .fontWeight(.regular)
-                .foregroundColor(Color.onBackground)
-            HStack {
-                Label(String(format: "%.2f", drinkDetail.starRate), systemImage: "star.fill")
-                    .labelStyle(AdaptiveLabelStyle(titleColor: .black))
+        ScrollView {
+            VStack(alignment: .leading, spacing: 0) {
+                HStack {
+                    Spacer()
+                    AsyncImage(url: URL(string: drinkDetail.image)) { image in
+                        image.resizable()
+                            .scaledToFill()
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    .frame(width: 250, height: 250, alignment: .center)
+                    .clipped()
+                    .clipShape(RoundedRectangle(cornerRadius: 16))
+                    Spacer()
+                }.padding(.bottom, 20)
+                Text(drinkDetail.categorie)
                     .font(.system(size: 20))
-                    .padding(.top, 16)
-                Text("(230)")
-                    .font(.system(size: 16))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                    .padding(.bottom, 4)
+                Text("with \(drinkDetail.toping)")
+                    .font(.system(size: 12))
+                    .fontWeight(.regular)
                     .foregroundColor(Color.onBackground)
-                    .offset(x: -6, y: 10)
-                Spacer()
-                Group {
-                    Image("bean")
-                        .resizable()
-                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                        .frame(width: 24, height: 24)
-                        .padding(10)
-                        .background(Color.iconBg)
-                    .clipShape(RoundedRectangle(cornerRadius: 14))
-                    Image("milk")
-                        .resizable()
-                        .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
-                        .frame(width: 24, height: 24)
-                        .padding(10)
-                        .background(Color.iconBg)
-                        .clipShape(RoundedRectangle(cornerRadius: 14))
-                        .padding(.leading)
+                HStack {
+                    Label(String(format: "%.2f", drinkDetail.starRate), systemImage: "star.fill")
+                        .labelStyle(AdaptiveLabelStyle(titleColor: .black))
+                        .font(.system(size: 20))
+                        .padding(.top, 16)
+                    Text("(230)")
+                        .font(.system(size: 16))
+                        .foregroundColor(Color.onBackground)
+                        .offset(x: -6, y: 10)
+                    Spacer()
+                    Group {
+                        Image("bean")
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .frame(width: 24, height: 24)
+                            .padding(10)
+                            .background(Color.iconBg)
+                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                        Image("milk")
+                            .resizable()
+                            .aspectRatio(contentMode: /*@START_MENU_TOKEN@*/.fill/*@END_MENU_TOKEN@*/)
+                            .frame(width: 24, height: 24)
+                            .padding(10)
+                            .background(Color.iconBg)
+                            .clipShape(RoundedRectangle(cornerRadius: 14))
+                            .padding(.leading)
+                    }
+                    .offset(x: 0, y: -10)
                 }
-                .offset(x: 0, y: -10)
-            }
-            Divider()
-                .padding(.vertical)
-            Text("Description")
-                .font(.system(size: 18))
-                .fontWeight(.semibold)
-                .foregroundColor(.black)
-                .padding(.bottom, 16)
-            let inline = Text("Read more")
-                .font(.system(size: 18))
-                .foregroundColor(Color.appPrimary)
-                .fontWeight(.semibold)
-            let message =
-            """
-            A cappuccino is an approximately 150 ml (5 oz) beverage, \
-            with 25 ml of espresso coffee and 85ml of fresh milk the fo...
-            """
-            Text("\(message) \(inline)")
-                .lineLimit(3)
-                .font(.system(size: 16))
-                .fontWeight(.regular)
-                .foregroundColor(Color.onBackground)
-            Text("Size")
-                .font(.system(size: 18))
-                .fontWeight(.semibold)
-                .foregroundColor(.black)
-                .padding(.bottom, 16)
-                .padding(.top, 16)
-            HStack {
-                ForEach(DrinkSize.allCases) { size in
-                    let isSelected = (size == selectedSize)
-                    Button {
-                        withAnimation {
-                            selectedSize = size
-                        }
-                    } label: {
-                        Text(size.rawValue)
-                            .frame(minWidth: 0, maxWidth: .infinity)
-                            .font(.system(size: 18))
-                            .padding()
-                            .foregroundColor(isSelected ? Color.appPrimary : .black)
-                            .background {
-                                if isSelected {
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .stroke(Color.appPrimary, lineWidth: 1)
-                                        .fill(Color.appPrimary.opacity(0.25))
-                                } else {
-                                    RoundedRectangle(cornerRadius: 16)
-                                        .stroke(Color.onBackground, lineWidth: 1)
-                                }
+                Divider()
+                    .padding(.vertical)
+                Text("Description")
+                    .font(.system(size: 18))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                    .padding(.bottom, 16)
+                let textA = "Being a top 1% developer isn’t just about mastering Swift, SwiftUI, and Xcode."
+                let textB = " It’s also about having a solid grasp of various languages, allowing you to blend them together to streamline your iOS project development."
+                ExpandableTextView(text: "\(textA)\(textB)")
+                    .padding(.horizontal, 24)
+                Text("Size")
+                    .font(.system(size: 18))
+                    .fontWeight(.semibold)
+                    .foregroundColor(.black)
+                    .padding(.bottom, 16)
+                    .padding(.top, 16)
+                HStack {
+                    ForEach(DrinkSize.allCases) { size in
+                        let isSelected = (size == selectedSize)
+                        Button {
+                            withAnimation {
+                                selectedSize = size
                             }
+                        } label: {
+                            Text(size.rawValue)
+                                .frame(minWidth: 0, maxWidth: .infinity)
+                                .font(.system(size: 18))
+                                .padding()
+                                .foregroundColor(isSelected ? Color.appPrimary : .black)
+                                .background {
+                                    if isSelected {
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .stroke(Color.appPrimary, lineWidth: 1)
+                                            .fill(Color.appPrimary.opacity(0.25))
+                                    } else {
+                                        RoundedRectangle(cornerRadius: 16)
+                                            .stroke(Color.onBackground, lineWidth: 1)
+                                    }
+                                }
+                        }
                     }
                 }
+                Spacer()
             }
-            Spacer()
-        }
-        .padding(.horizontal, 24)
-        .background(Color.canvas)
-        .navigationTitle("Detail")
-        .navigationBarTitleDisplayMode(.inline)
-        .navigationBarItems(
-            trailing: Button {
-                isFavorite.toggle()
-            }label: {
-                Image(systemName:
-                    "heart" + ( isFavorite ? ".fill" : "")
-                )
+            .padding(.horizontal, 24)
+            .background(Color.canvas)
+            .navigationTitle("Detail")
+            .navigationBarTitleDisplayMode(.inline)
+            .navigationBarItems(
+                trailing: Button {
+                    isFavorite.toggle()
+                }label: {
+                    Image(systemName:
+                            "heart" + ( isFavorite ? ".fill" : "")
+                    )
                     .resizable()
                     .aspectRatio(contentMode: .fit)
-            }
-                .padding(.trailing, 8)
-        )
+                }
+                    .padding(.trailing, 8)
+            )
+        }
+        .padding(.bottom, 120)
+        .background(Color.canvas)
         .overlay(alignment: .bottom) {
             HStack(alignment: .center) {
                 VStack(alignment: .leading) {
@@ -169,8 +163,11 @@ var btnBack: some View {
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: btnBack)
         .ignoresSafeArea(.container, edges: .bottom)
+  
     }
-}
+    
+        
+    }
 
 #Preview {
     ContentView()

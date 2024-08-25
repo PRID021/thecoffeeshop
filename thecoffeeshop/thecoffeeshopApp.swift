@@ -15,3 +15,7 @@ struct ThecoffeeshopApp: App {
         }
     }
 }
+
+#Preview {
+    ContentView()
+}

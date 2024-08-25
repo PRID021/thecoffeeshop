@@ -7,13 +7,9 @@
 
 import Foundation
 
-var scheme: String = "https"
-var domain: String = "api.sampleapis.com"
-var basePath: String = "coffee"
-
 enum CoffeeEndpoint: APIEndpoint {
-    var baseURL: URL {
-        return URL(string: "\(scheme):/\(domain)/\(basePath)")!
+    static var baseURL: String {
+        return "\(scheme):/\(domain)/\(basePath)"
     }
     var path: String {
         switch self {
@@ -22,21 +18,6 @@ enum CoffeeEndpoint: APIEndpoint {
         case .iced:
             return "iced"
         }
-    }
-
-    var method: HTTPMethod {
-        switch self {
-        case .hot:
-            return .get
-        case .iced:
-            return .get
-        }
-    }
-    var headers: [String: String]? {
-        return nil
-    }
-    var paramester: [String: Any]? {
-        return nil
     }
     case hot
     case iced

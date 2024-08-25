@@ -35,7 +35,7 @@ struct CustomTextField: View {
                     .stroke(.gray, lineWidth: 1)
                 RoundedRectangle(cornerRadius: 5)
                     .trim(from: 0.565 + (0.44 * (labelWidth / width)), to: 1)
-                    .stroke(.gray, lineWidth: 1)               
+                    .stroke(.gray, lineWidth: 1)
                 HStack {
                     Image(systemName: icon)
                         .resizable()

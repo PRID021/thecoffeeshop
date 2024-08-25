@@ -9,7 +9,14 @@ import SwiftUI
 
 struct Root: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            Color(UIColor.systemGray6)
+                   .ignoresSafeArea()
+            Image(.appIcon)
+                .resizable()
+                .frame(width: /*@START_MENU_TOKEN@*/100/*@END_MENU_TOKEN@*/ , height: 100)
+                .cornerRadius(5)
+        }
     }
 }
 

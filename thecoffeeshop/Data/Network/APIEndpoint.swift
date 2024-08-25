@@ -2,28 +2,16 @@
 //  ApiEndpoint.swift
 //  thecoffeeshop
 //
-//  Created by TE-Member on 19/12/2023.
+//  Created by TE-Member on 25/08/2024.
 //
 
 import Foundation
 
-protocol APIEndpoint {
-    var baseURL: URL { get }
+var scheme: String = "https"
+var domain: String = "api.sampleapis.com"
+var basePath: String = "coffee"
+
+public protocol APIEndpoint {
+    static  var baseURL: String { get }
     var path: String { get }
-    var method: HTTPMethod { get }
-    var headers: [String: String]? {get}
-    var paramester: [String: Any]? {get}
-}
-
-enum HTTPMethod: String {
-    case `get` = "GET"
-    case post = "POST"
-    case put = "PUT"
-    case patch = "PATCH"
-    case delete = "DELETE"
-}
-
-enum APIError: Error {
-    case invalidReponse
-    case invalidData
 }

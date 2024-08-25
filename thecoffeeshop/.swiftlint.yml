@@ -1,5 +1,5 @@
-opt_in_rules:
-    - indentation_width
-    - operator_usage_whitespace
-analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
-  - explicit_self
+#opt_in_rules:
+#    - indentation_width
+#    - operator_usage_whitespace
+#analyzer_rules: # Rules run by `swiftlint analyze` (experimental)
+#  - explicit_self

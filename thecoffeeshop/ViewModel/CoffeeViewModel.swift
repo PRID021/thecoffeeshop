@@ -28,10 +28,10 @@ class CoffeeViewModel: ObservableObject {
     @Published var selectedDrinkSection: DrinkSection {
         didSet {
             if selectedDrinkSection == drinkSections[0] {
-                fetchHotCoffee()
+                return fetchHotCoffee()
             }
             if selectedDrinkSection == drinkSections[1] {
-                fetchIcedCoffee()
+                return fetchIcedCoffee()
             }
         }
     }
@@ -68,6 +68,7 @@ class CoffeeViewModel: ObservableObject {
             .store(in: &canvellables)
     }
     func fetchIcedCoffee() {
+        print("fetchIcedCoffee")
         coffeeService.getIcedDrink()
             .receive(on: RunLoop.main)
             .sink(receiveCompletion: { complete in
@@ -75,7 +76,7 @@ class CoffeeViewModel: ObservableObject {
                 case .finished:
                     return
                 case .failure(let error):
-                    debugPrint("getHotDrink throw: \(error)")
+                    debugPrint("getIcedDrink throw: \(error)")
                 }
             }, receiveValue: { [weak self] data in
                 self?.coffees = data

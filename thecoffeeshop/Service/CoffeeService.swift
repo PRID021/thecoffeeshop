@@ -8,17 +8,29 @@
 import Foundation
 import Combine
 
+struct FetchHotDrink: Request {
+    var path: String  = CoffeeEndpoint.hot.path
+    typealias ReturnType = [DrinkCoffee]
+}
+
+struct FetchIcedDrink: Request {
+    var path: String  = CoffeeEndpoint.iced.path
+    typealias ReturnType = [DrinkCoffee]
+}
+
 protocol CoffeeServiceProtocal {
-    func getHotDrink() -> AnyPublisher<[DrinkCoffee], Error>
-    func getIcedDrink() -> AnyPublisher<[DrinkCoffee], Error>
+    func getHotDrink() -> AnyPublisher<FetchHotDrink.ReturnType, NetworkRequestError>
+    func getIcedDrink() -> AnyPublisher<FetchIcedDrink.ReturnType, NetworkRequestError>
 }
 
 class CoffeeService: CoffeeServiceProtocal {
-    func getHotDrink() -> AnyPublisher<[DrinkCoffee], Error> {
-        apiClient.request(.hot)
+
+    let dispatcher = NetworkDispatcher()
+    let apiClient = APIClient(baseURL: CoffeeEndpoint.baseURL)
+    func getHotDrink() -> AnyPublisher<FetchHotDrink.ReturnType, NetworkRequestError> {
+        return apiClient.dispatch(FetchHotDrink())
     }
-    func getIcedDrink() -> AnyPublisher<[DrinkCoffee], Error> {
-        apiClient.request(.iced)
+    func getIcedDrink() -> AnyPublisher<FetchIcedDrink.ReturnType, NetworkRequestError> {
+        return apiClient.dispatch(FetchIcedDrink())
     }
-    let apiClient = URLSessionAPIClient<CoffeeEndpoint>()
 }

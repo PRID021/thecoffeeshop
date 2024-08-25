@@ -23,8 +23,7 @@ struct Landing: View {
                 .foregroundColor(.onBackground)
                 .padding(.horizontal, 48)
             ElevatedButton(title: "Get Started", onPress: {
-                nav.path.removeAll()
-                print("nav : \(nav.path.count)")
+                nav.path = [.login]
             })
             .padding()
         }
@@ -38,7 +37,7 @@ struct Landing: View {
                     .offset(x: 0, y: -geo.size.height / 8)
             }
                 .background(Color.black)
-        )
+        ).navigationBarBackButtonHidden(true)
     }
 }
 #Preview {

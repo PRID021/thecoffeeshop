@@ -10,6 +10,7 @@ import SwiftUI
 struct Login: View {
     @State var userAccount = ""
     @State var passWord = ""
+    @EnvironmentObject var nav: NavigationStackState
     var body: some View {
         VStack {
             CustomTextField(icon: "person", placeHolder: "Username", text: $userAccount)
@@ -18,11 +19,9 @@ struct Login: View {
             SecurePasswordTextField(icon: "lock", placeHolder: "Password", text: $passWord)
             Spacer()
                 .frame(height: 16)
-            HStack{
+            HStack {
                 Spacer()
-                Button{
-                    
-                }label: {
+                Button {} label: {
                     Text("Registe right now")
                         .underline(true)
                         .foregroundColor(.white)
@@ -30,8 +29,8 @@ struct Login: View {
             }
             Spacer()
                 .frame(height: 16)
-            
             ElevatedButton(title: "Sign In", onPress: {
+                nav.path = [.home]
             })
         }
         .padding()

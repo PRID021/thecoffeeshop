@@ -26,6 +26,7 @@
 		C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160C2B2C32060066554C /* LinearStepIndicator.swift */; };
 		C004160F2B2C4D6E0066554C /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = C004160E2B2C4D6E0066554C /* Image.swift */; };
 		C00416112B2C4FAE0066554C /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00416102B2C4FAE0066554C /* Common.swift */; };
+		C00D14762C7B496F0012F539 /* ExpandableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C00D14752C7B496F0012F539 /* ExpandableTextView.swift */; };
 		C01B4ABF2B9196A4002D351D /* UserPreferenceKeys.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4ABE2B9196A4002D351D /* UserPreferenceKeys.swift */; };
 		C01B4AC32B91A2A3002D351D /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4AC22B91A2A3002D351D /* Login.swift */; };
 		C01B4AC52B91A371002D351D /* Root.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B4AC42B91A371002D351D /* Root.swift */; };
@@ -34,8 +35,12 @@
 		C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = C028979E2B295662009A6D5F /* DrinkDetail.swift */; };
 		C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A22B29B5A5009A6D5F /* DrinkSize.swift */; };
 		C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */; };
-		C0371CF72B3150A0004F5FEB /* APIEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */; };
 		C0371CFB2B3154CF004F5FEB /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0371CFA2B3154CF004F5FEB /* APIClient.swift */; };
+		C0691FE02C7AE23600DB6178 /* NetworkRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0691FDF2C7AE23600DB6178 /* NetworkRequestError.swift */; };
+		C0691FE22C7AE25300DB6178 /* Request.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0691FE12C7AE25300DB6178 /* Request.swift */; };
+		C0691FE42C7AE27400DB6178 /* NetworkDispatcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0691FE32C7AE27400DB6178 /* NetworkDispatcher.swift */; };
+		C0691FE62C7AE48000DB6178 /* ApiEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0691FE52C7AE48000DB6178 /* ApiEndpoint.swift */; };
+		C0691FE82C7AE5BB00DB6178 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = C0691FE72C7AE5BB00DB6178 /* HTTPMethod.swift */; };
 		C08BFFB52B2FFB6000541A63 /* TrackingMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08BFFB42B2FFB6000541A63 /* TrackingMap.swift */; };
 		C08E9B522B35622E0026862A /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = C08E9B502B3561F50026862A /* .swiftlint.yml */; };
 		C08E9B542B35845C0026862A /* DrinkCoffee.swift in Sources */ = {isa = PBXBuildFile; fileRef = C08E9B532B35845C0026862A /* DrinkCoffee.swift */; };
@@ -74,6 +79,7 @@
 		C004160C2B2C32060066554C /* LinearStepIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LinearStepIndicator.swift; sourceTree = "<group>"; };
 		C004160E2B2C4D6E0066554C /* Image.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 		C00416102B2C4FAE0066554C /* Common.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		C00D14752C7B496F0012F539 /* ExpandableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExpandableTextView.swift; sourceTree = "<group>"; };
 		C01B4ABE2B9196A4002D351D /* UserPreferenceKeys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferenceKeys.swift; sourceTree = "<group>"; };
 		C01B4AC22B91A2A3002D351D /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		C01B4AC42B91A371002D351D /* Root.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Root.swift; sourceTree = "<group>"; };
@@ -82,8 +88,12 @@
 		C028979E2B295662009A6D5F /* DrinkDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkDetail.swift; sourceTree = "<group>"; };
 		C02897A22B29B5A5009A6D5F /* DrinkSize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkSize.swift; sourceTree = "<group>"; };
 		C02897A42B29BBC6009A6D5F /* CardQuantityPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardQuantityPicker.swift; sourceTree = "<group>"; };
-		C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoint.swift; sourceTree = "<group>"; };
 		C0371CFA2B3154CF004F5FEB /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
+		C0691FDF2C7AE23600DB6178 /* NetworkRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequestError.swift; sourceTree = "<group>"; };
+		C0691FE12C7AE25300DB6178 /* Request.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Request.swift; sourceTree = "<group>"; };
+		C0691FE32C7AE27400DB6178 /* NetworkDispatcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkDispatcher.swift; sourceTree = "<group>"; };
+		C0691FE52C7AE48000DB6178 /* ApiEndpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiEndpoint.swift; sourceTree = "<group>"; };
+		C0691FE72C7AE5BB00DB6178 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		C08BFFB42B2FFB6000541A63 /* TrackingMap.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackingMap.swift; sourceTree = "<group>"; };
 		C08E9B502B3561F50026862A /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		C08E9B532B35845C0026862A /* DrinkCoffee.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DrinkCoffee.swift; sourceTree = "<group>"; };
@@ -198,6 +208,7 @@
 				C004160C2B2C32060066554C /* LinearStepIndicator.swift */,
 				C01B4AC62B91A51E002D351D /* CustomTextField.swift */,
 				C01B4AC82B91A650002D351D /* SecurePasswordTextField.swift */,
+				C00D14752C7B496F0012F539 /* ExpandableTextView.swift */,
 			);
 			path = Component;
 			sourceTree = "<group>";
@@ -205,9 +216,13 @@
 		C0371CF52B315065004F5FEB /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				C0371CF62B3150A0004F5FEB /* APIEndpoint.swift */,
 				C0371CFA2B3154CF004F5FEB /* APIClient.swift */,
 				C08E9B562B3585390026862A /* CoffeeEndpoint.swift */,
+				C0691FDF2C7AE23600DB6178 /* NetworkRequestError.swift */,
+				C0691FE12C7AE25300DB6178 /* Request.swift */,
+				C0691FE32C7AE27400DB6178 /* NetworkDispatcher.swift */,
+				C0691FE52C7AE48000DB6178 /* ApiEndpoint.swift */,
+				C0691FE72C7AE5BB00DB6178 /* HTTPMethod.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -361,6 +376,7 @@
 				04564B802B27456700A6D7ED /* ContentView.swift in Sources */,
 				C0CE72AA2B282E5500897D53 /* DrinkItem.swift in Sources */,
 				0436FF922B3084A00034438D /* Route.swift in Sources */,
+				C0691FE42C7AE27400DB6178 /* NetworkDispatcher.swift in Sources */,
 				C01B4AC92B91A650002D351D /* SecurePasswordTextField.swift in Sources */,
 				04564BAF2B274EE300A6D7ED /* ElevatedButton.swift in Sources */,
 				C0371CFB2B3154CF004F5FEB /* APIClient.swift in Sources */,
@@ -368,7 +384,9 @@
 				C0B6AF0B2B2AA4CD00EA918A /* OrderPage.swift in Sources */,
 				C02897A32B29B5A5009A6D5F /* DrinkSize.swift in Sources */,
 				C0B6AF0D2B2ABE3400EA918A /* CustomDivider.swift in Sources */,
+				C0691FE62C7AE48000DB6178 /* ApiEndpoint.swift in Sources */,
 				04564BAC2B27495B00A6D7ED /* Color.swift in Sources */,
+				C0691FE02C7AE23600DB6178 /* NetworkRequestError.swift in Sources */,
 				C028979F2B295662009A6D5F /* DrinkDetail.swift in Sources */,
 				C08BFFB52B2FFB6000541A63 /* TrackingMap.swift in Sources */,
 				C0CE72B02B284AC700897D53 /* DrinkSection.swift in Sources */,
@@ -376,7 +394,6 @@
 				C08E9B572B3585390026862A /* CoffeeEndpoint.swift in Sources */,
 				C00416112B2C4FAE0066554C /* Common.swift in Sources */,
 				C08E9B542B35845C0026862A /* DrinkCoffee.swift in Sources */,
-				C0371CF72B3150A0004F5FEB /* APIEndpoint.swift in Sources */,
 				C004160D2B2C32060066554C /* LinearStepIndicator.swift in Sources */,
 				C01B4ABF2B9196A4002D351D /* UserPreferenceKeys.swift in Sources */,
 				049E08662B27CEA300842B7D /* UserTitle.swift in Sources */,
@@ -386,11 +403,14 @@
 				C02897A52B29BBC6009A6D5F /* CardQuantityPicker.swift in Sources */,
 				04045DD22B28A21200502577 /* FavoriteTab.swift in Sources */,
 				C01B4AC72B91A51E002D351D /* CustomTextField.swift in Sources */,
+				C0691FE22C7AE25300DB6178 /* Request.swift in Sources */,
+				C00D14762C7B496F0012F539 /* ExpandableTextView.swift in Sources */,
 				04564B7E2B27456700A6D7ED /* thecoffeeshopApp.swift in Sources */,
 				0436FF902B306DEA0034438D /* NavigationStackState.swift in Sources */,
 				C0CE72A72B27FB2C00897D53 /* TextPlaceHolder.swift in Sources */,
 				C004160F2B2C4D6E0066554C /* Image.swift in Sources */,
 				04564BB12B27544F00A6D7ED /* Home.swift in Sources */,
+				C0691FE82C7AE5BB00DB6178 /* HTTPMethod.swift in Sources */,
 				04564BB32B275AEA00A6D7ED /* HomeTab.swift in Sources */,
 				04564BA92B27464E00A6D7ED /* Landing.swift in Sources */,
 				04045DD82B28B3EC00502577 /* ResizeableVStack.swift in Sources */,

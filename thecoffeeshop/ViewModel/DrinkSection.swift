@@ -11,4 +11,3 @@ struct DrinkSection: Identifiable, Hashable {
     var id: String = UUID().uuidString
     var collection: String
 }
-

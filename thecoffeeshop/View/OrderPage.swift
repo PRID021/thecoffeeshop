@@ -159,8 +159,3 @@ struct PriceLabel: View {
         }
     }
 }
-//
-//#Preview {
-//    let drinkItem: DrinkItem = drinkSections[0].drinks[0]
-//    return OrderPage(drinkDetail: drinkItem, drinkSize: .siM)
-//}

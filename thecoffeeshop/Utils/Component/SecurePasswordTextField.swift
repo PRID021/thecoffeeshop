@@ -81,6 +81,3 @@ struct SecurePasswordTextField: View {
         }
     }
 }
-//#Preview {
-//    SecurePasswordTextField()
-//}

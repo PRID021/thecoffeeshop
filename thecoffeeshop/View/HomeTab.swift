@@ -8,7 +8,6 @@ import Foundation
 import SwiftUI
 
 struct HomeTab: View {
-//    @State var searchInput: String = ""
     @StateObject var viewModel: CoffeeViewModel = CoffeeViewModel(coffeeService: CoffeeService())
     @State var shouldExpand = false
     var animation: Namespace.ID
@@ -64,6 +63,7 @@ struct HomeTab: View {
                                     Button {
                                         withAnimation {
                                             viewModel.selectedDrinkSection = drinkSection
+                                            print("Select \(drinkSection)")
                                             scrollView.scrollTo(viewModel.selectedDrinkSection)
                                         }
                                     }label: {
